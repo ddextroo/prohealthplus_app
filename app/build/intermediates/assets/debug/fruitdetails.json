@@ -1,0 +1,258 @@
+[
+    {
+        "name": "apple",
+        "nutrients": [
+            {
+                "title": "Antioxidants",
+                "content": "Apples are rich in antioxidants like flavonoids and polyphenols. These compounds help combat oxidative stress in the body, reducing the risk of chronic diseases and supporting overall health."
+              },
+              {
+                "title": "Vitamin C",
+                "content": "While apples contain a moderate amount of vitamin C, this antioxidant vitamin still contributes to immune function, skin health, and collagen production."
+              },
+              {
+                "title": "Vitamin K",
+                "content": "Apples also provide a small amount of vitamin K. This vitamin is crucial for blood clotting and bone health."
+              },
+              {
+                "title": "Dietary Fiber",
+                "content": "Apples are a great source of dietary fiber, particularly pectin, which aids in digestion, promotes gut health, and helps regulate blood sugar levels."
+              }
+        ],
+        "description": "Apple (Malus domestica), is a domesticated tree and fruit of the rose family (Rosaceae), one of the most widely cultivated tree fruits. Apples are grown mostly for their fresh fruit, but they are also used in the commercial sector to manufacture cans of apple butter, vinegar, juice, jam, and applesauce. Many of the world's harvests are also used to make brandy, wine, and cider. Fresh apples can be eaten either raw or cooked. There are numerous uses for cooked apples. One popular use is as a filling for pastries; the most common Filipino apple dishes are apple spring rolls, apple turon, and apple pie. Particularly in Europe, fried apples are usually served with recipes that call for sausage or pig. Apples are rich in carbohydrates, a good source of dietary fiber, and a good source of vitamins A and C.",
+        "history": "Native to the temperate zones of both hemispheres, Malus species (apples) are cultivated and thought to be domesticated from wild apples (M. sieversii), in the Tien Shan mountains of central Asia some 4,000-10,000 years ago. From there it traveled to western Europe through the Silk road and hybridized with a few wild crabapples, including M. baccata from Siberia, M. orientalis from the Caucasus, and M. sylvestris, the major secondary genetic contributor, from other parts of Europe.",
+        "effects": "Consuming too many apples in one sitting might cause digestive discomfort due to high fiber content."
+    },
+    {
+        "name": "banana",
+        "nutrients": [
+            {
+                "title": "Potassium",
+                "content": "Bananas are renowned for their high potassium content. This essential mineral plays a crucial role in maintaining proper heart function, regulating blood pressure, and supporting muscle contractions. Adequate potassium intake, provided by bananas, helps balance electrolytes in the body, contributing to overall cardiovascular health."
+              },
+              {
+                "title": "Vitamin B6",
+                "content": "Bananas are a good source of vitamin B6, which is vital for numerous bodily functions. Vitamin B6 supports the production of neurotransmitters in the brain, aiding in mood regulation and cognitive function. Additionally, it plays a role in the metabolism of proteins, helping the body utilize energy from food effectively."
+              },
+              {
+                "title": "Fiber",
+                "content": "Bananas contain a notable amount of dietary fiber. Fiber supports digestive health by promoting regular bowel movements, preventing constipation, and aiding in the maintenance of a healthy gut microbiome. Additionally, it helps in controlling blood sugar levels and contributes to a feeling of fullness, which can assist in weight management."
+              }
+        ],
+        "description": "Banana is a fruit from the Musa genus, of the family Musaceae. It is one of the most significant fruit crops worldwide. The banana is a fruit that grows in the tropics and is prized for its flavor, nutritional content, and year-round availability despite being consumed primarily in those regions. Cavendish, or dessert, bananas can be fried, mashed, and chilled in pies or puddings, but they are usually consumed fresh. They can also be added to breads, cakes, or muffins to flavor them. Plantains, also known as cooking varieties, are widely grown as a staple food source in tropical regions and are starchy rather than sweet. They are cooked when ripe or immature. A ripe fruit has a high content of dietary fiber, potassium, manganese, vitamins B6 and C, and up to 22 percent carbohydrates.",
+        "history": "It is most likely that the Malay Peninsula, Indonesia, the Philippines, and New Guinea are where bananas first appeared some 10,000 years ago. They were brought to Polynesia, Africa, and India by traders and travelers. Bananas are mentioned as early as 600 BC, and in 327 BC Alexander the Great came across them in India. Bananas arrived in China by 200 AD, where they were regarded as exotic. The pulp of the first wild bananas was sparse and the seeds were big and hard. Africans crossed the  Musa Acuminata  and  Musa Baalbisiana varieties to create the modern banana, which is seedless and more palatable, around 650 AD. After being considered strange and foreign for centuries, bananas became popular in the 20th century",
+        "effects": "Excessive consumption may contribute to an imbalance in potassium levels, affecting heart health."
+    },
+    {
+        "name": "corn",
+        "nutrients": [
+            {
+                "title": "Antioxidants",
+                "content": "Corn contains various antioxidants, including carotenoids like lutein and zeaxanthin. These antioxidants help protect the eyes from age-related macular degeneration and reduce the risk of chronic diseases by combating free radicals in the body."
+              },
+              {
+                "title": "Fiber",
+                "content": "Corn is a good source of dietary fiber, which aids in digestion, promotes bowel regularity, and helps control blood sugar levels. The fiber content in corn contributes to a healthy digestive system."
+              },
+              {
+                "title": "Vitamins B and C",
+                "content": "Corn contains several B vitamins, such as thiamine (B1), niacin (B3), and pantothenic acid (B5). These vitamins play vital roles in energy production, nervous system function, and red blood cell formation. Additionally, corn provides a modest amount of vitamin C, contributing to immune support and collagen production."
+              },
+              {
+                "title": "Manganese",
+                "content": "Corn also contains minerals like manganese, which is essential for bone health, wound healing, and metabolism. Manganese acts as a cofactor for various enzymes in the body, supporting multiple physiological processes."
+              }
+        ],
+        "description": "Zea mays, the scientific name for corn, is a cereal plant in the Poaceae family of grasses. Its edible grain is very important to agriculture. This is one of the most widely distributed food crops, having spread throughout the world since its domestication in the Americas. Corn is used for a variety of things, including human food, biofuel, animal feed, and raw materials for industrial processes.",
+        "history": "Native peoples in southern Mexico domesticated corn around 10,000 years ago. Modern corn, believed to have originated from the Balsas teosinte, a wild grass (Zea mays parviglumis), spread north to southern Maine by the time Europeans settled in North America. Native Americans shared their knowledge of cultivating indigenous grains with European colonists. Introduced to Europe by Christopher Columbus and other explorers, corn has proliferated globally in areas suitable for cultivation, ranging from 58° N latitude in Canada and Russia to 40° S latitude in South America. Corn crops mature somewhere in the world nearly every month, making it the most crucial crop in the United States and a staple food in many regions.",
+        "effects": "Eating large amounts of processed corn products may contribute to an imbalanced diet."
+    },
+    {
+        "name": "corn",
+        "nutrients": [
+            {
+                "title": "Antioxidants",
+                "content": "Corn contains various antioxidants, including carotenoids like lutein and zeaxanthin. These antioxidants help protect the eyes from age-related macular degeneration and reduce the risk of chronic diseases by combating free radicals in the body."
+              },
+              {
+                "title": "Fiber",
+                "content": "Corn is a good source of dietary fiber, which aids in digestion, promotes bowel regularity, and helps control blood sugar levels. The fiber content in corn contributes to a healthy digestive system."
+              },
+              {
+                "title": "Vitamins B and C",
+                "content": "Corn contains several B vitamins, such as thiamine (B1), niacin (B3), and pantothenic acid (B5). These vitamins play vital roles in energy production, nervous system function, and red blood cell formation. Additionally, corn provides a modest amount of vitamin C, contributing to immune support and collagen production."
+              },
+              {
+                "title": "Manganese",
+                "content": "Corn also contains minerals like manganese, which is essential for bone health, wound healing, and metabolism. Manganese acts as a cofactor for various enzymes in the body, supporting multiple physiological processes."
+              }
+        ],
+        "description": "Zea mays, the scientific name for corn, is a cereal plant in the Poaceae family of grasses. Its edible grain is very important to agriculture. This is one of the most widely distributed food crops, having spread throughout the world since its domestication in the Americas. Corn is used for a variety of things, including human food, biofuel, animal feed, and raw materials for industrial processes.",
+        "history": "Native peoples in southern Mexico domesticated corn around 10,000 years ago. Modern corn, believed to have originated from the Balsas teosinte, a wild grass (Zea mays parviglumis), spread north to southern Maine by the time Europeans settled in North America. Native Americans shared their knowledge of cultivating indigenous grains with European colonists. Introduced to Europe by Christopher Columbus and other explorers, corn has proliferated globally in areas suitable for cultivation, ranging from 58° N latitude in Canada and Russia to 40° S latitude in South America. Corn crops mature somewhere in the world nearly every month, making it the most crucial crop in the United States and a staple food in many regions.",
+        "effects": "Eating large amounts of processed corn products may contribute to an imbalanced diet."
+    },
+    {
+        "name": "eggplant",
+        "nutrients": [
+            {
+                "title": "Vitamin C",
+                "content": "Eggplants contain a small amount of vitamin C, which acts as an antioxidant, supporting the immune system and aiding in collagen production."
+              },
+              {
+                "title": "Vitamin K",
+                "content": "They also contain vitamin K, which is essential for blood clotting and bone health."
+              },
+              {
+                "title": "Vitamin B6",
+                "content": "Eggplants provide a moderate amount of vitamin B6, which plays a role in brain health, immune function, and the production of neurotransmitters."
+              }
+        ],
+        "description": "Eggplant, scientifically known as Solanum melongena, is a tender perennial plant belonging to the nightshade family (Solanaceae). Cultivated for its edible fruits, eggplant thrives in warm climates and has been grown in Southeast Asia since ancient times. Widely featured in Mediterranean cuisines, eggplant plays a significant role in classic dishes like Greek moussaka, Italian eggplant parmigiana, and the Middle Eastern relish baba ghanoush. It is commonly prepared by baking, grilling, frying, or boiling, serving as a versatile vegetable in various culinary applications, including garnishes and stews. The plant shares close botanical ties with the tomato (Solanum lycopersicum), potato (S. tuberosum), and several poisonous nightshades.",
+        "history": "Eggplants thrive when directly sown in tropical and subtropical climates. In temperate regions, a more favorable outcome is achieved by transplanting them into the garden once the threat of frost has subsided. Typically, seeds are initiated eight to ten weeks before the anticipated frost-free date.",
+        "effects": "Allergic reactions to eggplant are rare, but individuals with known allergies should exercise caution."
+    },
+    {
+        "name": "potato",
+        "nutrients": [
+            {
+                "title": "Vitamin C",
+                "content": "Potatoes are a source of vitamin C, providing a notable amount of this antioxidant vitamin. Vitamin C supports the immune system, aids in collagen production, and acts as an antioxidant, helping to protect cells from damage."
+              },
+              {
+                "title": "Vitamin B6",
+                "content": "Potatoes are a good source of vitamin B6. This vitamin is involved in various metabolic processes, including amino acid metabolism, neurotransmitter synthesis, and red blood cell formation."
+              },
+              {
+                "title": "Potassium",
+                "content": "Potatoes are relatively high in potassium. This essential mineral helps regulate fluid balance, supports muscle contractions (including the heart), and plays a role in maintaining healthy blood pressure levels."
+              },
+              {
+                "title": "Fiber",
+                "content": "Potatoes, especially when consumed with the skin, provide dietary fiber. This fiber aids in digestion, promotes bowel regularity, and can help with maintaining stable blood sugar levels."
+              } 
+        ],
+        "description": "A member of the nightshade family (Solanaceae), the potato (Solanum tuberosum) is an annual plant grown for its starchy, edible tubers. With its roots in the Andes of Peru and Bolivia, it is currently the world's most important food crop. As a cooked vegetable, potatoes are typically prepared whole or mashed. They are also ground into potato flour, which is used in baking and sauce thickening. Potatoes, which have a reputation for being highly digestible, are a good source of protein, thiamin, niacin, and vitamin C.\n\nPotato stems grow underground stolons, which can grow to form multiple tubers of different sizes and shapes. Though they sometimes weigh more than 1.5 kg, tubers usually weigh no more than 300 grams. The starchy flesh can be white, yellow, or purple, and the skin can range in color from brownish white to deep purple. Growers can propagate desired traits through vegetative reproduction made easier by the spirally arranged buds (eyes) on tubers. Vegetative reproduction is widely used in commerce, but it reduces genetic diversity, making popular varieties more prone to illnesses and pests.",
+        "history": "It is possible that potatoes were independently domesticated more than once; the Incas in South America were the main cultivators of potatoes some 1,800 years ago. Potatoes were brought to Europe by the Spanish invaders in the late 16th century, and by the end of the 17th century, they were a significant crop in Ireland. By the late 18th century, potatoes had spread throughout continental Europe, especially in Germany and the west of England. During the first forty years of the 19th century, the potato's influence grew even more on a global scale, and its importance to the Irish economy increased significantly. But catastrophic crop failures—most notably, the late blight (Phytophthora infestans) that caused the Irish Potato Famine in the middle of the 19th century—led to a more circumspect attitude toward reliance on potatoes.",
+        "effects": "Frying potatoes or consuming excessive amounts of processed potato products may lead to health issues due to added fats and calories."
+    },
+    {
+        "name": "mango",
+        "nutrients": [
+            {
+                "title": "Vitamin A",
+                "content": "Mangoes are rich in beta-carotene, a precursor to vitamin A. This vitamin supports vision, immune function, and skin health. Beta-carotene acts as an antioxidant, contributing to overall cellular protection."
+              },
+              {
+                "title": "Vitamin C",
+                "content": "Mangoes are a fantastic source of vitamin C, an essential antioxidant that supports the immune system, aids in collagen production, and assists in wound healing."
+              },
+              {
+                "title": "Vitamin E",
+                "content": "Mangoes contain a small amount of vitamin E, which acts as an antioxidant, protecting cells from damage caused by free radicals and supporting skin health."
+              },
+              {
+                "title": "Antioxidants",
+                "content": "Mangoes contain various antioxidants, including phenolic compounds and carotenoids, which contribute to their overall antioxidant properties, helping to combat oxidative stress in the body."
+              },
+              {
+                "title": "Fiber",
+                "content": "Mangoes are a good source of dietary fiber, particularly when eaten with the skin. Fiber supports digestive health, aids in bowel regularity, and can help control blood sugar levels."
+              }
+        ],
+        "description": "The mango, scientifically referred to as Mangifera indica, is a fruit that is widely grown in tropical regions and is a member of the cashew family (Anacardiaceae). Numerous cultivars of the mango tree are thought to have developed from their origins in southern Asia, specifically in Myanmar and the Indian state of Assam. Mangoes are a rich source of vitamins A, C, and D.",
+        "history": "India's religious rituals and folklore are closely linked to the mango. Buddha was given a mango grove so that he could rest in its appreciative shade. The Malayam manna, which the Portuguese called manga when they arrived in Kerala in 1498 to engage in the spice trade, is most likely the source of the name mango, by which the fruit is known in English- and Spanish-speaking countries. The reason behind the tree's introduction into the Western Hemisphere around 1700, when it was planted in Brazil, is likely due to the challenge of transferring seeds, which lose their viability quickly. The tree eventually made its way to the West Indies around 1740.",
+        "effects": "Due to their natural sugar content, consuming large quantities of mangoes may contribute to excessive calorie and sugar intake."
+    },
+    {
+        "name": "garlic",
+        "nutrients": [
+            {
+                "title": "Vitamin C",
+                "content": "Garlic contains a small amount of vitamin C, which acts as an antioxidant and supports the immune system."
+              },
+              {
+                "title": "Vitamin B6",
+                "content": "Garlic is a decent source of vitamin B6, also known as pyridoxine. This vitamin plays a role in various bodily functions, including metabolism, brain health, and the production of neurotransmitters."
+            },
+             {
+                "name": "Allicin",
+                "description": "Formed when garlic is crushed or chopped, allicin has antibacterial and antifungal properties, contributing to garlic's health benefits."
+              },
+              {
+                "name": "Flavonoids",
+                "description": "Garlic contains flavonoids like quercetin, known for their anti-inflammatory and immune-boosting properties."
+              },
+              {
+                "name": "Sulfur Compounds",
+                "description": "Rich in sulfur-containing compounds, garlic's diallyl disulfide and S-allyl cysteine contribute to its aroma and are linked to potential cardiovascular benefits and antioxidants."
+              }
+        ],
+        "description": "Sown for its flavorful bulbs, garlic ( 'Allium sativum ) is a perennial plant in the  Amaryllis  family ( Amaryllidaceae ). Although the plant is native to central Asia, it grows wild in southern France and Italy and is a staple in many national dishes. The bulbs are not typically consumed raw due to their strong flavor and onion-like aroma.\n\nGarlic was used as a charm against vampires and other evils and was highly valued for its medicinal qualities in the ancient and medieval eras. There is some evidence that the plant, which is widely used in traditional and folk medicine, may help prevent heart disease. The main constituents of the approximately 0.1 percent essential oil found in garlic are diallyl disulfide, diallyl trisulfide, and allyl propyl disulfide.",
+        "history": "It is thought that garlic originated in southwest Siberia, central Asia, or South Asia.  The origin of this herb is a subject of some debate. It is among the earliest crops to be cultivated in history.  The pungent herb made its way into Egypt, Pakistan, India, and China thanks to garlic lovers.  Garlic was brought back to Europe by the crusaders. Garlic was later brought to the Americas by Spanish, French, and Portuguese colonists.    ",
+        "effects": "Some individuals may experience digestive discomfort or allergic reactions to garlic."
+    },
+    {
+        "name": "pineapple",
+        "nutrients": [
+            {
+                "title": "Vitamin C",
+                "content": "Pineapple is an excellent source of vitamin C, providing a significant portion of this antioxidant vitamin. Vitamin C supports the immune system, aids in collagen production, and acts as an antioxidant, helping protect cells from damage."
+              },
+              {
+                "title": "Vitamin B6",
+                "content": "Pineapple contains a moderate amount of vitamin B6. This vitamin plays a role in brain health, immune function, and the production of neurotransmitters."
+              },
+              {
+                "title": "Manganese",
+                "content": "Pineapple is a good source of manganese. This mineral is important for bone health, wound healing, and metabolism. Manganese acts as a cofactor for various enzymes in the body, supporting multiple physiological processes."
+              },
+              {
+                "title": "Antioxidants",
+                "content": "Pineapple contains various antioxidants like flavonoids and phenolic acids. These antioxidants contribute to its overall antioxidant properties, helping to combat oxidative stress in the body."
+              }
+        ],
+        "description": "Ananas comosus, a perennial plant in the Bromeliaceae family, bears edible fruit. Although it originated in tropical and subtropical America, pineapple has been exported to other regions. In what is loosely called Pan-Asian cuisine, the fruit has come to be recognized as a staple ingredient in rice, meat, vegetable, and fish dishes. Around the world, fruit is consumed in both fresh and canned forms. It is occasionally used as a pastry filling or in baked goods in both the US and Europe.",
+        "history": "Christopher Columbus, Gonzalo Fernández de Oviedo y Valdés, and Sir Walter Raleigh are credited with the first written accounts of pineapple. They discovered pineapple growing in the West Indies, where it was used to make wine and food.\n\nThe pineapple's early spread seems to have been caused by the Portuguese. Soon after they found that island in 1502, they brought it to Saint Helena. They took it to Africa shortly after, and by 1550 or so, they had reached India. The plant was cultivated throughout most of the world's",
+        "effects": "Excessive consumption may lead to digestive issues or mouth discomfort due to bromelain."
+    },
+    {
+        "name": "orange",
+        "nutrients": [
+            {
+                "title": "Vitamin C",
+                "content": "Oranges are renowned for their high vitamin C content. They are an excellent source of this antioxidant vitamin, which supports the immune system, aids in collagen production, and acts as an antioxidant, protecting cells from damage."
+              },
+              {
+                "title": "Fiber",
+                "content": "Oranges contain dietary fiber, particularly in their pulp. Fiber supports digestive health, aids in maintaining bowel regularity, and can help control blood sugar levels."
+              },
+              {
+                "title": "Antioxidants",
+                "content": "Oranges contain various antioxidants, including flavonoids and phytochemicals like hesperidin and beta-carotene. These antioxidants contribute to overall cellular protection, reducing the risk of chronic diseases by combating free radicals in the body."
+              }
+        ],
+        "description": "Any of a number of species of small trees or shrubs in the Rutaceae family's Citrus genus that are known for their nearly round fruits with edible, juicy inner flesh and a leathery, greasy rind are known as oranges. Economically significant orange species and varieties include the mandarin orange (Citrus reticulata), which is also known as the 'tangerine' variety; the China orange (Citrus ×sinensis), also known as the 'sweet' or 'common' orange; and the less common Seville orange (Citrus ×aurantium). Typical types of sweet oranges are the Israel-sourced Jaffa, the seedless navel, and the Maltese, or blood, orange.\n\nBecause orange trees are semi-dormant and can withstand temperatures just below freezing, oranges do well in areas that occasionally experience light frosts during the winter, unless an early frost interferes with the trees' yearly growth. Smudge pots or smokeless natural gas burners are used by orchards for heating in colder climates. Orange trees can grow in a variety of soil types, although in deep orchard soil, they prefer well-drained intermediate types. Orchards typically use trees budded on stocks that are grown from carefully chosen seeds, sown in a lath house, and moved to a nursery after a year. The trees, which are typically big enough for budding after 12 to 16 months in the nursery, are planted in the orchard when the budded tops are one to two years old.",
+        "history": "Oranges are thought to have originated in tropical Asia, specifically in the Malay Archipelago. Through Roman conquests and Arab trade, orange cultivation spread to India, Africa, and the Mediterranean. Orange trees were widespread in the Canary Islands by the time of Columbus. They are now flourishing in many parts of the world. Oranges were once only used as dessert fruit, but as more people started drinking orange juice and realized how healthy it was, oranges became more and more popular. The main product produced in the US is frozen concentrated juice, with marmalade, candied peel, pectin, and essential oils as byproducts. Growers cultivate sour oranges for marmalade, and leftover fruit is fed to livestock. Due to their high vitamin C and A content, oranges remain a vital crop worldwide.",
+        "effects": "Some individuals may experience digestive discomfort or heartburn with excessive intake."
+    },
+    {
+        "name": "carrot",
+        "nutrients": [
+            {
+                "title": "Vitamin A",
+                "content": "Carrots are well-known for their high content of beta-carotene, a precursor to vitamin A. This vitamin is essential for vision health, immune function, and skin health. Beta-carotene acts as an antioxidant, supporting overall cellular health."
+              },
+              {
+                "title": "Vitamin K",
+                "content": "Carrots also contain vitamin K, albeit in smaller amounts. Vitamin K is crucial for blood clotting and bone health."
+              },
+              {
+                "title": "Fiber",
+                "content": "Carrots are a good source of dietary fiber, particularly insoluble fiber. Fiber supports digestive health, promotes bowel regularity, and aids in maintaining stable blood sugar levels."
+              }
+        ],
+        "description": "In the Apiaceae family, the edible taproot of the carrot ( Daucus carota ) is produced by a herbaceous, typically biennial plant. Root shapes vary among common varieties, with blunt or pointed lower ends and globular to long shapes. Variety with white, yellow, and purple flesh are known in addition to orange-colored roots.\n\nNative to Eurasia, wild carrot (subspecies  D. carota carota , also known as Queen Anne's lace) is believed to have been domesticated in Central Asia circa 1000 CE. Archaeological excavations have revealed prehistoric seeds, indicating that the plant was utilized medicinally prior to the domestication of its edible root. By the thirteenth century, carrots were farmed in China and northwest Europe, and during European colonization, wild carrot was inadvertently introduced as a weed to the United States. Nowadays, domesticated carrots (subspecies  D. carota sativus ) are widely planted in temperate regions. Carotene (provitamin A) is found in abundance in carrots, and its benefits were recognized in the 20th century, which led to a rise in the vegetable's popularity.",
+        "history": "Carrots were originally domesticated in middle Asia (Kashmir or Punjab), but they later made their way to Near East Asia, then Europe, and China. Prior to being utilized as a food crop in the tenth and twelfth centuries, it was primarily utilized as a medicinal plant. In its natural state, the taproot is woody. On the other hand, the cultivated form's (subsp. sativus) root has become thicker and more succulent due to breeding and selection. Selections made in the seventeenth century for orange roots in Holland and later in France led to the creation of modern European cultivars.",
+        "effects": "Excessive carrot consumption might cause carotenemia, a harmless skin discoloration resulting from high beta-carotene levels."
+    }
+]
