@@ -42,7 +42,8 @@ public class ViewActivity extends AppCompatActivity {
 	private HashMap<String, Object> m3 = new HashMap<>();
 	private String jsonResponse = "";
 	private String pred = "";
-	
+	private String accuracy = "";
+
 	private LinearLayout linear2;
 	private LinearLayout linear3;
 	private LinearLayout linear4;
@@ -58,7 +59,9 @@ public class ViewActivity extends AppCompatActivity {
 	private TextView textview4;
 	private TextView textview6;
 	private TextView textview8;
-	
+	private TextView accuracyTitle;
+	private TextView accuracyLabel;
+
 	private RequestNetwork requestnet2;
 	private RequestNetwork.RequestListener _requestnet2_request_listener;
 	private Intent i = new Intent();
@@ -76,14 +79,16 @@ public class ViewActivity extends AppCompatActivity {
 	private void initialize(Bundle _savedInstanceState) {
 		linear2 = findViewById(R.id.linear2);
 		linear3 = findViewById(R.id.linear3);
-		linear4 = findViewById(R.id.linear4);
+		linear4 = findViewById(R.id.linearDetected);
+		accuracyTitle = findViewById(R.id.accuracyTitle);
+		accuracyLabel = findViewById(R.id.accuracy);
 		linear5 = findViewById(R.id.linear5);
 		linear6 = findViewById(R.id.linear6);
 		linear8 = findViewById(R.id.linear8);
 		linear10 = findViewById(R.id.linear10);
 		textview1 = findViewById(R.id.textview1);
-		textview2 = findViewById(R.id.textview2);
-		textview3 = findViewById(R.id.textview3);
+		textview2 = findViewById(R.id.detectedTitle);
+		textview3 = findViewById(R.id.detected);
 		lottie1 = findViewById(R.id.lottie1);
 		imageview1 = findViewById(R.id.imageview1);
 		textview4 = findViewById(R.id.textview4);
@@ -143,12 +148,16 @@ public class ViewActivity extends AppCompatActivity {
 						} else {
 								JSONObject prediction = predictions.getJSONObject(0);
 								pred = prediction.getString("class");
+								accuracy = prediction.getString("confidence");
 						}
 				} catch (Exception e) {
 						e.printStackTrace();
 				}
 				
 				_firsletter(textview3, pred);
+				double percentage = Double.parseDouble(accuracy) * 100;
+				String formattedValue = String.format("%.2f%%", percentage);
+				accuracyLabel.setText(formattedValue);
 				if (pred.equals("No predictions found")) {
 					
 				}
@@ -172,9 +181,12 @@ public class ViewActivity extends AppCompatActivity {
 		textview1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montbold.ttf"), Typeface.NORMAL);
 		textview2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.BOLD);
 		textview3.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.NORMAL);
+		accuracyLabel.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.NORMAL);
 		textview4.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.BOLD);
 		textview6.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.BOLD);
 		textview8.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.BOLD);
+		textview2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.BOLD);
+		accuracyTitle.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.BOLD);
 		_rippleRoundStroke(linear5, "#fefefe", "#e0e0e0", 25, 2.5d, "#e0e0e0");
 		_rippleRoundStroke(linear6, "#008073", "#fefefe", 25, 0, "#fefefe");
 		_rippleRoundStroke(linear8, "#008073", "#fefefe", 25, 0, "#fefefe");

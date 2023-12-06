@@ -1872,6 +1872,8 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
+id accuracy
+id accuracyTitle
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -1959,6 +1961,8 @@ id design_menu_item_action_area
 id design_menu_item_action_area_stub
 id design_menu_item_text
 id design_navigation_view
+id detected
+id detectedTitle
 id dialog_button
 id dimensions
 id direct
@@ -2040,11 +2044,12 @@ id linear1
 id linear10
 id linear2
 id linear3
-id linear4
 id linear5
 id linear6
 id linear7
 id linear8
+id linearAccuracy
+id linearDetected
 id listMode
 id list_item
 id lottie1
@@ -2238,8 +2243,6 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id textview1
-id textview2
-id textview3
 id textview4
 id textview5
 id textview6

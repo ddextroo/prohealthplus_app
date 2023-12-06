@@ -3,10 +3,6 @@ package com.ddev.prohealth;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.text.Html;
-import android.text.Spannable;
-import android.text.SpannableString;
-import android.text.style.AbsoluteSizeSpan;
-import android.text.style.StyleSpan;
 import android.util.SparseBooleanArray;
 import android.util.TypedValue;
 import android.view.View;
@@ -52,7 +48,7 @@ public class DetailActivity extends AppCompatActivity {
 		linear1 = findViewById(R.id.linear1);
 		linear2 = findViewById(R.id.linear2);
 		textview1 = findViewById(R.id.textview1);
-		textview2 = findViewById(R.id.textview2);
+		textview2 = findViewById(R.id.detectedTitle);
 	}
 	
 	private void initializeLogic() {

@@ -104,10 +104,10 @@ public class HomeActivity extends AppCompatActivity {
 		imageview1 = findViewById(R.id.imageview1);
 		textview4 = findViewById(R.id.textview4);
 		textview1 = findViewById(R.id.textview1);
-		linear4 = findViewById(R.id.linear4);
+		linear4 = findViewById(R.id.linearDetected);
 		linear5 = findViewById(R.id.linear5);
-		textview2 = findViewById(R.id.textview2);
-		textview3 = findViewById(R.id.textview3);
+		textview2 = findViewById(R.id.detectedTitle);
+		textview3 = findViewById(R.id.detected);
 		
 		linear4.setOnClickListener(new View.OnClickListener() {
 			@Override

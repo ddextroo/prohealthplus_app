@@ -1,114 +1,118 @@
 [
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/layout_cus.xml.flat",
-        "source": "com.ddev.prohealth.app-main-34:/layout/cus.xml"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_default_image.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\default_image.png"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/layout_activity_debug.xml.flat",
-        "source": "com.ddev.prohealth.app-main-34:/layout/activity_debug.xml"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_arrowl.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\arrowl.png"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/drawable-xhdpi_default_image.png.flat",
-        "source": "com.ddev.prohealth.app-main-34:/drawable-xhdpi/default_image.png"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_calendar.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\calendar.png"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/drawable-xhdpi_bottom_nav_4.png.flat",
-        "source": "com.ddev.prohealth.app-main-34:/drawable-xhdpi/bottom_nav_4.png"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\layout_camera.xml.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\layout\\camera.xml"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/drawable-xhdpi_refresh.png.flat",
-        "source": "com.ddev.prohealth.app-main-34:/drawable-xhdpi/refresh.png"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_bottom_nav_4.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\bottom_nav_4.png"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/layout_detail.xml.flat",
-        "source": "com.ddev.prohealth.app-main-34:/layout/detail.xml"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_refresh.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\refresh.png"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/drawable-xhdpi_download.png.flat",
-        "source": "com.ddev.prohealth.app-main-34:/drawable-xhdpi/download.png"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_close.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\close.png"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/drawable-xhdpi_menu.png.flat",
-        "source": "com.ddev.prohealth.app-main-34:/drawable-xhdpi/menu.png"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_circle_filled.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\circle_filled.png"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/drawable-xhdpi_expense.png.flat",
-        "source": "com.ddev.prohealth.app-main-34:/drawable-xhdpi/expense.png"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\layout_detail.xml.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\layout\\detail.xml"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/drawable-xhdpi_calendar.png.flat",
-        "source": "com.ddev.prohealth.app-main-34:/drawable-xhdpi/calendar.png"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_bottom_nav_3.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\bottom_nav_3.png"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/layout_home.xml.flat",
-        "source": "com.ddev.prohealth.app-main-34:/layout/home.xml"
-    },
-    {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/drawable-xhdpi_close.png.flat",
-        "source": "com.ddev.prohealth.app-main-34:/drawable-xhdpi/close.png"
-    },
-    {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/drawable-xhdpi_app_icon.png.flat",
-        "source": "com.ddev.prohealth.app-main-34:/drawable-xhdpi/app_icon.png"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\layout_activity_debug.xml.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\layout\\activity_debug.xml"
     },
     {
         "merged": "com.ddev.prohealth.app-merged_res-32:/layout_view.xml.flat",
         "source": "com.ddev.prohealth.app-main-34:/layout/view.xml"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/drawable-xhdpi_check_line.png.flat",
-        "source": "com.ddev.prohealth.app-main-34:/drawable-xhdpi/check_line.png"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\xml_provider_paths.xml.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\xml\\provider_paths.xml"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/drawable-xhdpi_bottom_nav_1.png.flat",
-        "source": "com.ddev.prohealth.app-main-34:/drawable-xhdpi/bottom_nav_1.png"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_logo.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\logo.png"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/drawable-xhdpi_logo.png.flat",
-        "source": "com.ddev.prohealth.app-main-34:/drawable-xhdpi/logo.png"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_expense.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\expense.png"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/drawable-xhdpi_bottom_nav_3.png.flat",
-        "source": "com.ddev.prohealth.app-main-34:/drawable-xhdpi/bottom_nav_3.png"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_bottom_nav_1.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\bottom_nav_1.png"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/drawable-xhdpi_circle_outline.png.flat",
-        "source": "com.ddev.prohealth.app-main-34:/drawable-xhdpi/circle_outline.png"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_circle_outline.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\circle_outline.png"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/drawable-xhdpi_arrowr.png.flat",
-        "source": "com.ddev.prohealth.app-main-34:/drawable-xhdpi/arrowr.png"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_check_line.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\check_line.png"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/xml_provider_paths.xml.flat",
-        "source": "com.ddev.prohealth.app-main-34:/xml/provider_paths.xml"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_app_icon.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\app_icon.png"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/layout_main.xml.flat",
-        "source": "com.ddev.prohealth.app-main-34:/layout/main.xml"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_definitioj_1.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\definitioj_1.png"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/layout_camera.xml.flat",
-        "source": "com.ddev.prohealth.app-main-34:/layout/camera.xml"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\layout_cus.xml.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\layout\\cus.xml"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/drawable-xhdpi_definitioj_1.png.flat",
-        "source": "com.ddev.prohealth.app-main-34:/drawable-xhdpi/definitioj_1.png"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\layout_home.xml.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\layout\\home.xml"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/drawable-xhdpi_plus.png.flat",
-        "source": "com.ddev.prohealth.app-main-34:/drawable-xhdpi/plus.png"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\layout_view.xml.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\layout\\view.xml"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/drawable-xhdpi_bottom_nav_2.png.flat",
-        "source": "com.ddev.prohealth.app-main-34:/drawable-xhdpi/bottom_nav_2.png"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_download.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\download.png"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/drawable-xhdpi_arrowl.png.flat",
-        "source": "com.ddev.prohealth.app-main-34:/drawable-xhdpi/arrowl.png"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\layout_main.xml.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\layout\\main.xml"
     },
     {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/drawable-xhdpi_circle_filled.png.flat",
-        "source": "com.ddev.prohealth.app-main-34:/drawable-xhdpi/circle_filled.png"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_menu.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\menu.png"
+    },
+    {
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_arrowr.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\arrowr.png"
+    },
+    {
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_plus.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\plus.png"
+    },
+    {
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_bottom_nav_2.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\bottom_nav_2.png"
     }
 ]
