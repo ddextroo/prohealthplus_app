@@ -59,8 +59,7 @@ public class DetailActivity extends AppCompatActivity {
 			    JSONArray fruitsArray = new JSONArray(_loadFromAsset());
 			    for (int i = 0; i < fruitsArray.length(); i++) {
 				        JSONObject fruitObject = fruitsArray.getJSONObject(i);
-				
-				        if (getIntent().getStringExtra("name").equals(fruitObject.getString("name"))) {
+				        if (getIntent().getStringExtra("name").trim().equals(fruitObject.getString("name").trim())) {
 					            String name = fruitObject.getString("name");
 					            String description = fruitObject.getString("description");
 					            String history = fruitObject.getString("history");
@@ -72,7 +71,7 @@ public class DetailActivity extends AppCompatActivity {
 					            for (int j = 0; j < nutrientsArray.length(); j++) {
 						                JSONObject nutrientObject = nutrientsArray.getJSONObject(j);
 						
-						                if (getIntent().getStringExtra("name").equals(name)) {
+						                if (getIntent().getStringExtra("name").trim().equals(name.trim())) {
 							                    String nutrientTitle = nutrientObject.getString("title");
 							                    String nutrientContent = nutrientObject.getString("content");
 							

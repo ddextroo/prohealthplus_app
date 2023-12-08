@@ -1914,6 +1914,7 @@ id barrier
 id baseline
 id beginOnFirstDraw
 id beginning
+id bitmapImage
 id blocking
 id bottom
 id bounce

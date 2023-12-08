@@ -68,13 +68,6 @@ public class CameraActivity extends AppCompatActivity {
 	private Intent cam = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
 	private File _file_cam;
 	private Intent i = new Intent();
-	private StorageReference fstore = _firebase_storage.getReference("imgs");
-	private OnCompleteListener<Uri> _fstore_upload_success_listener;
-	private OnSuccessListener<FileDownloadTask.TaskSnapshot> _fstore_download_success_listener;
-	private OnSuccessListener _fstore_delete_success_listener;
-	private OnProgressListener _fstore_upload_progress_listener;
-	private OnProgressListener _fstore_download_progress_listener;
-	private OnFailureListener _fstore_failure_listener;
 	
 	
 	@Override
@@ -132,64 +125,12 @@ public class CameraActivity extends AppCompatActivity {
 					SketchwareUtil.showMessage(getApplicationContext(), "Image must be captured");
 				}
 				else {
-					fstore.child(filename).putFile(Uri.fromFile(new File(filepath))).addOnFailureListener(_fstore_failure_listener).addOnProgressListener(_fstore_upload_progress_listener).continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
-						@Override
-						public Task<Uri> then(Task<UploadTask.TaskSnapshot> task) throws Exception {
-							return fstore.child(filename).getDownloadUrl();
-						}}).addOnCompleteListener(_fstore_upload_success_listener);
-					_Custom_Loading(true);
+					i.setClass(getApplicationContext(), ViewActivity.class);
+					i.putExtra("img", filepath);
+					startActivity(i);
 				}
 			}
 		});
-		
-		_fstore_upload_progress_listener = new OnProgressListener<UploadTask.TaskSnapshot>() {
-			@Override
-			public void onProgress(UploadTask.TaskSnapshot _param1) {
-				double _progressValue = (100.0 * _param1.getBytesTransferred()) / _param1.getTotalByteCount();
-				
-			}
-		};
-		
-		_fstore_download_progress_listener = new OnProgressListener<FileDownloadTask.TaskSnapshot>() {
-			@Override
-			public void onProgress(FileDownloadTask.TaskSnapshot _param1) {
-				double _progressValue = (100.0 * _param1.getBytesTransferred()) / _param1.getTotalByteCount();
-				
-			}
-		};
-		
-		_fstore_upload_success_listener = new OnCompleteListener<Uri>() {
-			@Override
-			public void onComplete(Task<Uri> _param1) {
-				final String _downloadUrl = _param1.getResult().toString();
-				i.setClass(getApplicationContext(), ViewActivity.class);
-				i.putExtra("img", _downloadUrl);
-				startActivity(i);
-			}
-		};
-		
-		_fstore_download_success_listener = new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
-			@Override
-			public void onSuccess(FileDownloadTask.TaskSnapshot _param1) {
-				final long _totalByteCount = _param1.getTotalByteCount();
-				
-			}
-		};
-		
-		_fstore_delete_success_listener = new OnSuccessListener() {
-			@Override
-			public void onSuccess(Object _param1) {
-				
-			}
-		};
-		
-		_fstore_failure_listener = new OnFailureListener() {
-			@Override
-			public void onFailure(Exception _param1) {
-				final String _message = _param1.getMessage();
-				
-			}
-		};
 	}
 	
 	private void initializeLogic() {

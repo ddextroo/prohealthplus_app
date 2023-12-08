@@ -2,6 +2,7 @@ package com.ddev.prohealth;
 
 import android.Manifest;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
@@ -9,6 +10,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.provider.OpenableColumns;
 import android.util.SparseBooleanArray;
 import android.util.TypedValue;
@@ -41,6 +43,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -65,15 +71,10 @@ public class HomeActivity extends AppCompatActivity {
 	private TextView textview3;
 	
 	private Intent i = new Intent();
-	private StorageReference fstore = _firebase_storage.getReference("imgs");
-	private OnCompleteListener<Uri> _fstore_upload_success_listener;
-	private OnSuccessListener<FileDownloadTask.TaskSnapshot> _fstore_download_success_listener;
-	private OnSuccessListener _fstore_delete_success_listener;
-	private OnProgressListener _fstore_upload_progress_listener;
-	private OnProgressListener _fstore_download_progress_listener;
-	private OnFailureListener _fstore_failure_listener;
-	
-	
+	private static final int PICK_IMAGE_REQUEST = 1;
+
+
+
 	@Override
 	protected void onCreate(Bundle _savedInstanceState) {
 		super.onCreate(_savedInstanceState);
@@ -120,60 +121,32 @@ public class HomeActivity extends AppCompatActivity {
 		linear5.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _view) {
-				_PickFile("image/*");
+				pickImage();
 			}
 		});
-		
-		_fstore_upload_progress_listener = new OnProgressListener<UploadTask.TaskSnapshot>() {
-			@Override
-			public void onProgress(UploadTask.TaskSnapshot _param1) {
-				double _progressValue = (100.0 * _param1.getBytesTransferred()) / _param1.getTotalByteCount();
-				
-			}
-		};
-		
-		_fstore_download_progress_listener = new OnProgressListener<FileDownloadTask.TaskSnapshot>() {
-			@Override
-			public void onProgress(FileDownloadTask.TaskSnapshot _param1) {
-				double _progressValue = (100.0 * _param1.getBytesTransferred()) / _param1.getTotalByteCount();
-				
-			}
-		};
-		
-		_fstore_upload_success_listener = new OnCompleteListener<Uri>() {
-			@Override
-			public void onComplete(Task<Uri> _param1) {
-				final String _downloadUrl = _param1.getResult().toString();
-				i.setClass(getApplicationContext(), ViewActivity.class);
-				i.putExtra("img", _downloadUrl);
-				startActivity(i);
-			}
-		};
-		
-		_fstore_download_success_listener = new OnSuccessListener<FileDownloadTask.TaskSnapshot>() {
-			@Override
-			public void onSuccess(FileDownloadTask.TaskSnapshot _param1) {
-				final long _totalByteCount = _param1.getTotalByteCount();
-				
-			}
-		};
-		
-		_fstore_delete_success_listener = new OnSuccessListener() {
-			@Override
-			public void onSuccess(Object _param1) {
-				
-			}
-		};
-		
-		_fstore_failure_listener = new OnFailureListener() {
-			@Override
-			public void onFailure(Exception _param1) {
-				final String _message = _param1.getMessage();
-				
-			}
-		};
 	}
-	
+	private void pickImage() {
+		Intent intent = new Intent(Intent.ACTION_GET_CONTENT);
+		intent.setType("image/*"); // Set MIME type to filter only images
+		startActivityForResult(intent, PICK_IMAGE_REQUEST);
+	}
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+
+		if (requestCode == PICK_IMAGE_REQUEST && resultCode == RESULT_OK && data != null && data.getData() != null) {
+			// Get the selected image URI
+			Uri selectedImageUri = data.getData();
+
+			i.setClass(getApplicationContext(), ViewActivity.class);
+			i.putExtra("img", selectedImageUri.toString());
+			startActivity(i);
+
+			// Alternatively, you can get the file path from the URI
+			// String imagePath = getPathFromUri(selectedImageUri);
+		}
+	}
+
 	private void initializeLogic() {
 		_rippleRoundStroke(linear4, "#008037", "#fefefe", 25, 0, "#fefefe");
 		_rippleRoundStroke(linear5, "#008037", "#fefefe", 25, 0, "#fefefe");
@@ -192,83 +165,6 @@ public class HomeActivity extends AppCompatActivity {
 		Color.parseColor("#" + _strokeclr.replace("#", "")));
 		android.graphics.drawable.RippleDrawable RE = new android.graphics.drawable.RippleDrawable(new android.content.res.ColorStateList(new int[][]{new int[]{}}, new int[]{ Color.parseColor(_pressed)}), GG, null);
 		_view.setBackground(RE);
-	}
-	
-	
-	public void _PickFileListener() {
-	}
-	@Override 
-	public void onActivityResult(int requestCode, int resultCode, Intent data) {
-
-		// If no sellection was made, we return back to the activity
-		super.onActivityResult(requestCode, resultCode, data);
-		if (resultCode != RESULT_OK) {
-			SketchwareUtil.showMessage(getApplicationContext(), "File not selected");
-			return;
-		} else {
-			if (requestCode == 100) {
-				//File picker returning a Uri
-				Uri uri = data.getData();
-				//App data directory
-				String dataPath = "/data/data/" + getApplicationContext().getPackageName();
-
-				Cursor returnCursor = getContentResolver().query(uri, null, null, null, null);
-				/*
-				 * Get the column indexes of the data in the Cursor,
-				 * move to the first row in the Cursor, get the data,
-				 * and display it.
-				 */
-				int nameIndex = returnCursor.getColumnIndex(OpenableColumns.DISPLAY_NAME);
-				int sizeIndex = returnCursor.getColumnIndex(OpenableColumns.SIZE);
-				returnCursor.moveToFirst();
-				final String fileName = returnCursor.getString(nameIndex);
-				String fileSize = Long.toString(returnCursor.getLong(sizeIndex));
-				try {
-					InputStream in = null;
-					OutputStream out = null;
-					try {
-						// open the user-picked file for reading:
-						in = getContentResolver().openInputStream(uri);
-						// open the output-file,(to your app data Directory)
-						out = new FileOutputStream(new File(dataPath + "/" + fileName));
-						// copy the file
-						byte[] buffer = new byte[1024];
-						int len;
-						while ((len = in.read(buffer)) != -1) {
-							out.write(buffer, 0, len);
-						}
-						// Contents are copied
-					} finally {
-						if (in != null) {
-							in.close();
-						}
-						if (out != null) {
-							out.close();
-						}
-					}
-				} catch (IOException e) {
-					e.printStackTrace();
-					// handle exception correctly.
-				}
-				filePath = dataPath.concat("/".concat(fileName));
-				fstore.child(fileName).putFile(Uri.fromFile(new File(filePath))).addOnFailureListener(_fstore_failure_listener).addOnProgressListener(_fstore_upload_progress_listener).continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>() {
-					@Override
-					public Task<Uri> then(Task<UploadTask.TaskSnapshot> task) throws Exception {
-						return fstore.child(fileName).getDownloadUrl();
-					}
-				}).addOnCompleteListener(_fstore_upload_success_listener);
-				_Custom_Loading(true);
-			}
-		}
-	}
-	
-	
-	public void _PickFile(final String _extension) {
-		//New Intent 
-		Intent i = new Intent(Intent.ACTION_OPEN_DOCUMENT);
-		i.setType(_extension);
-		i = Intent.createChooser(i, "Choose an File");
-		startActivityForResult(i, 100);
 	}
 	
 	

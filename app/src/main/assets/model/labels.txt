@@ -1,0 +1,10 @@
+apple
+banana
+carrot
+corn
+eggplant
+garlic
+mango
+orange
+pineapple
+potato

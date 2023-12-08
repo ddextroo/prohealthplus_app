@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.SparseBooleanArray;
 import android.util.TypedValue;
@@ -18,18 +19,20 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.ddev.prohealth.detection.Classifier;
+import com.ddev.prohealth.detection.TensorFlowImageClassifier;
 import com.google.firebase.FirebaseApp;
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
+import java.io.File;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
+import android.graphics.Bitmap;
 
 public class ViewActivity extends AppCompatActivity {
 	
@@ -41,8 +44,8 @@ public class ViewActivity extends AppCompatActivity {
 	private HashMap<String, Object> m2 = new HashMap<>();
 	private HashMap<String, Object> m3 = new HashMap<>();
 	private String jsonResponse = "";
-	private String pred = "";
-	private String accuracy = "";
+	private String[] pred = {};
+	private String[] accuracy =  {};
 
 	private LinearLayout linear2;
 	private LinearLayout linear3;
@@ -61,12 +64,19 @@ public class ViewActivity extends AppCompatActivity {
 	private TextView textview8;
 	private TextView accuracyTitle;
 	private TextView accuracyLabel;
-
-	private RequestNetwork requestnet2;
-	private RequestNetwork.RequestListener _requestnet2_request_listener;
+	private ImageView bitmapImage;
 	private Intent i = new Intent();
 	private TimerTask t;
-	
+	private String MODEL_PATH;
+	private final boolean QUANT = false;
+	private String LABEL_PATH;
+	private static final int INPUT_SIZE = 224;
+
+	private Classifier classifier;
+
+	private Executor executor = Executors.newSingleThreadExecutor();
+	private String path;
+
 	@Override
 	protected void onCreate(Bundle _savedInstanceState) {
 		super.onCreate(_savedInstanceState);
@@ -94,8 +104,11 @@ public class ViewActivity extends AppCompatActivity {
 		textview4 = findViewById(R.id.textview4);
 		textview6 = findViewById(R.id.textview6);
 		textview8 = findViewById(R.id.textview8);
-		requestnet2 = new RequestNetwork(this);
-		
+		bitmapImage = findViewById(R.id.bitmapImage);
+		LoadAssets loadFromAsset = new LoadAssets(getApplicationContext());
+		this.MODEL_PATH = "model/model.tflite";
+		this.LABEL_PATH = "model/labels.txt";
+
 		linear6.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _view) {
@@ -126,55 +139,6 @@ public class ViewActivity extends AppCompatActivity {
 			}
 		});
 		
-		_requestnet2_request_listener = new RequestNetwork.RequestListener() {
-			@Override
-			public void onResponse(String _param1, String _param2, HashMap<String, Object> _param3) {
-				final String _tag = _param1;
-				final String _response = _param2;
-				final HashMap<String, Object> _responseHeaders = _param3;
-				m = new Gson().fromJson(_response, new TypeToken<HashMap<String, Object>>(){}.getType());
-				lottie1.setVisibility(View.GONE);
-				imageview1.setVisibility(View.VISIBLE);
-				byte[] decoded= android.util.Base64.decode(m.get("encoded_image").toString(), android.util.Base64.DEFAULT); 		android.graphics.Bitmap bmp = android.graphics.BitmapFactory.decodeByteArray(decoded, 0, decoded.length); 		android.graphics.drawable.BitmapDrawable bd = new android.graphics.drawable.BitmapDrawable(bmp); 		imageview1.setImageDrawable(bd);
-				jsonResponse = _response;
-				try{
-						
-						JSONObject jsonResponse2 = new JSONObject(jsonResponse);
-						JSONObject response = jsonResponse2.getJSONObject("response");
-						JSONArray predictions = response.getJSONArray("predictions");
-						if (predictions.length() == 0) {
-								// System.out.println("No predictions found.");
-						        pred = "No predictions found";
-						} else {
-								JSONObject prediction = predictions.getJSONObject(0);
-								pred = prediction.getString("class");
-								accuracy = prediction.getString("confidence");
-						}
-				} catch (Exception e) {
-						e.printStackTrace();
-				}
-				
-				_firsletter(textview3, pred);
-				double percentage = Double.parseDouble(accuracy) * 100;
-				String formattedValue = String.format("%.2f%%", percentage);
-				accuracyLabel.setText(formattedValue);
-				if (pred.equals("No predictions found")) {
-					
-				}
-				else {
-					linear6.setEnabled(true);
-					linear8.setEnabled(true);
-					linear10.setEnabled(true);
-				}
-			}
-			
-			@Override
-			public void onErrorResponse(String _param1, String _param2) {
-				final String _tag = _param1;
-				final String _message = _param2;
-				
-			}
-		};
 	}
 	
 	private void initializeLogic() {
@@ -191,10 +155,24 @@ public class ViewActivity extends AppCompatActivity {
 		_rippleRoundStroke(linear6, "#008073", "#fefefe", 25, 0, "#fefefe");
 		_rippleRoundStroke(linear8, "#008073", "#fefefe", 25, 0, "#fefefe");
 		_rippleRoundStroke(linear10, "#008073", "#fefefe", 25, 0, "#fefefe");
-		imageview1.setVisibility(View.GONE);
-		linear6.setEnabled(false);
-		linear8.setEnabled(false);
-		linear10.setEnabled(false);
+		lottie1.setVisibility(View.GONE);
+		initTensorFlowAndLoadModel();
+		bitmapImage.setVisibility(View.GONE);
+		path = getIntent().getStringExtra("img");
+		Bitmap bitmap = URItoBitmap.URItoBitmap(this, Uri.parse(path));
+		bitmap = Bitmap.createScaledBitmap(bitmap, INPUT_SIZE, INPUT_SIZE, false);
+		imageview1.setImageBitmap(bitmap);
+		final List<Classifier.Recognition> results = classifier.recognizeImage(bitmap);
+		StringBuilder combinedTitles = new StringBuilder();
+		StringBuilder combinedAccuracy = new StringBuilder();
+		for (Classifier.Recognition result : results) {
+			String title = result.getTitle();
+			float accuracy = result.getConfidence();
+			combinedTitles.append(title).append("\n");
+			combinedAccuracy.append(String.format("%.2f%% ", accuracy * 100.0f)).append("\n");
+		}
+		_firsletter(textview3, combinedTitles.toString());
+		accuracyLabel.setText(combinedAccuracy.toString());
 	}
 	
 	public void _firsletter(final TextView _textview, final String _text) {
@@ -248,27 +226,6 @@ public class ViewActivity extends AppCompatActivity {
 	{
 	}
 	
-	@Override
-	public void onStart() {
-		super.onStart();
-		t = new TimerTask() {
-			@Override
-			public void run() {
-				runOnUiThread(new Runnable() {
-					@Override
-					public void run() {
-						Header2 = new HashMap<>();
-						Header2.put("Content-Type", "application/json");
-						body2.put("image_url", getIntent().getStringExtra("img"));
-						requestnet2.setHeaders(Header2);
-						requestnet2.setParams(body2, RequestNetworkController.REQUEST_BODY);
-						requestnet2.startRequestNetwork(RequestNetworkController.POST, "https://prohealth.onrender.com/predict", "", _requestnet2_request_listener);
-					}
-				});
-			}
-		};
-		_timer.schedule(t, (int)(500));
-	}
 	public void _rippleRoundStroke(final View _view, final String _focus, final String _pressed, final double _round, final double _stroke, final String _strokeclr) {
 		android.graphics.drawable.GradientDrawable GG = new android.graphics.drawable.GradientDrawable();
 		GG.setColor(Color.parseColor(_focus));
@@ -356,4 +313,22 @@ public class ViewActivity extends AppCompatActivity {
 	public int getDisplayHeightPixels() {
 		return getResources().getDisplayMetrics().heightPixels;
 	}
+	private void initTensorFlowAndLoadModel() {
+		executor.execute(new Runnable() {
+			@Override
+			public void run() {
+				try {
+					classifier = TensorFlowImageClassifier.create(
+							getAssets(),
+							MODEL_PATH,
+							LABEL_PATH,
+							INPUT_SIZE,
+							QUANT);
+				} catch (final Exception e) {
+					throw new RuntimeException("Error initializing TensorFlow!", e);
+				}
+			}
+		});
+	}
+
 }

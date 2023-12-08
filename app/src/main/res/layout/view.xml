@@ -185,5 +185,12 @@
 				android:textSize="12sp"
 				android:textColor="#FEFEFE" />
 		</LinearLayout>
+
+		<ImageView
+			android:id="@+id/bitmapImage"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:visibility="gone"
+			app:srcCompat="@drawable/app_icon" />
 	</LinearLayout>
 </LinearLayout>

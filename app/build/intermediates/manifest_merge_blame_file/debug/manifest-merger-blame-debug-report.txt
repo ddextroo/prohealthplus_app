@@ -26,253 +26,258 @@
 17    <uses-permission android:name="android.permission.CAMERA" />
 17-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:11:2-62
 17-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:11:19-59
-18    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-18-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:12:2-77
-18-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:12:19-74
-19    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-19-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:13:2-78
-19-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:13:19-75
-20    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-20-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:13:2-78
-20-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:13:19-75
-21    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
-21-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:15:2-79
-21-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:15:19-76
-22    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-22-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:12:2-77
-22-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:12:19-74
-23
-24    <permission
-24-->[androidx.core:core:1.9.0] C:\Users\W10\.gradle\caches\transforms-3\1da4e8a23665c9ed1c7bfc03cd9c78b4\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
-25        android:name="com.ddev.prohealth.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-25-->[androidx.core:core:1.9.0] C:\Users\W10\.gradle\caches\transforms-3\1da4e8a23665c9ed1c7bfc03cd9c78b4\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
-26        android:protectionLevel="signature" />
-26-->[androidx.core:core:1.9.0] C:\Users\W10\.gradle\caches\transforms-3\1da4e8a23665c9ed1c7bfc03cd9c78b4\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
-27
-28    <uses-permission android:name="com.ddev.prohealth.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-28-->[androidx.core:core:1.9.0] C:\Users\W10\.gradle\caches\transforms-3\1da4e8a23665c9ed1c7bfc03cd9c78b4\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
-28-->[androidx.core:core:1.9.0] C:\Users\W10\.gradle\caches\transforms-3\1da4e8a23665c9ed1c7bfc03cd9c78b4\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
-29
-30    <application
-30-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:17:2-90:16
-31        android:allowBackup="true"
-31-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:18:3-29
-32        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-32-->[androidx.core:core:1.9.0] C:\Users\W10\.gradle\caches\transforms-3\1da4e8a23665c9ed1c7bfc03cd9c78b4\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
-33        android:debuggable="true"
-34        android:extractNativeLibs="false"
-35        android:icon="@drawable/app_icon"
-35-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:19:3-36
-36        android:label="@string/app_name"
-36-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:20:3-35
-37        android:requestLegacyExternalStorage="true"
-37-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:21:3-46
-38        android:testOnly="true"
-39        android:theme="@style/AppTheme"
-39-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:23:3-34
-40        android:usesCleartextTraffic="true" >
-40-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:22:3-38
-41        <activity
-41-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:24:3-35:14
-42            android:name="com.ddev.prohealth.MainActivity"
-42-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:25:4-32
-43            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-43-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:26:4-97
-44            android:exported="true"
-44-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:30:4-27
-45            android:hardwareAccelerated="true"
-45-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:27:4-38
-46            android:screenOrientation="portrait"
-46-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:29:4-40
-47            android:supportsPictureInPicture="true" >
-47-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:28:4-43
-48            <intent-filter>
-48-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:31:4-34:20
-49                <action android:name="android.intent.action.MAIN" />
-49-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:32:5-57
-49-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:32:13-54
-50
-51                <category android:name="android.intent.category.LAUNCHER" />
-51-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:33:5-65
-51-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:33:15-62
-52            </intent-filter>
-53        </activity>
-54        <activity
-54-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:36:3-41:43
-55            android:name="com.ddev.prohealth.HomeActivity"
-55-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:37:4-32
-56            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-56-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:38:4-97
-57            android:hardwareAccelerated="true"
-57-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:39:4-38
-58            android:screenOrientation="portrait"
-58-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:41:4-40
-59            android:supportsPictureInPicture="true" />
-59-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:40:4-43
-60        <activity
-60-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:42:3-47:43
-61            android:name="com.ddev.prohealth.ViewActivity"
-61-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:43:4-32
-62            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-62-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:44:4-97
-63            android:hardwareAccelerated="true"
-63-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:45:4-38
-64            android:screenOrientation="portrait"
-64-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:47:4-40
-65            android:supportsPictureInPicture="true" />
-65-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:46:4-43
-66        <activity
-66-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:48:3-53:43
-67            android:name="com.ddev.prohealth.CameraActivity"
-67-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:49:4-34
-68            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-68-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:50:4-97
-69            android:hardwareAccelerated="true"
-69-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:51:4-38
-70            android:screenOrientation="portrait"
-70-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:53:4-40
-71            android:supportsPictureInPicture="true" />
-71-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:52:4-43
-72        <activity
-72-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:54:3-59:43
-73            android:name="com.ddev.prohealth.DetailActivity"
-73-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:55:4-34
-74            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
-74-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:56:4-97
-75            android:hardwareAccelerated="true"
-75-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:57:4-38
-76            android:screenOrientation="portrait"
-76-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:59:4-40
-77            android:supportsPictureInPicture="true" />
-77-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:58:4-43
-78        <activity
-78-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:60:3-62:43
-79            android:name="com.ddev.prohealth.DebugActivity"
-79-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:61:4-33
-80            android:screenOrientation="portrait" />
-80-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:62:4-40
-81
-82        <meta-data
-82-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:63:3-65:60
-83            android:name="com.google.android.gms.version"
-83-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:64:4-49
-84            android:value="@integer/google_play_services_version" />
-84-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:65:4-57
-85
-86        <provider
-86-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:66:3-70:30
-87            android:name="com.google.firebase.provider.FirebaseInitProvider"
-87-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:67:4-68
-88            android:authorities="com.ddev.prohealth.firebaseinitprovider"
-88-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:68:4-65
-89            android:directBootAware="true"
-89-->[com.google.firebase:firebase-common:20.4.2] C:\Users\W10\.gradle\caches\transforms-3\09d410e74e84251ab52a7daa058203c3\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:26:13-43
-90            android:exported="false"
-90-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:69:4-28
-91            android:initOrder="100" />
-91-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:70:4-27
-92
-93        <service
-93-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:71:3-77:13
-94            android:name="com.google.firebase.components.ComponentDiscoveryService"
-94-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:72:4-75
-95            android:directBootAware="true"
-95-->[com.google.firebase:firebase-common:20.4.2] C:\Users\W10\.gradle\caches\transforms-3\09d410e74e84251ab52a7daa058203c3\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:32:13-43
-96            android:exported="false" >
-96-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:73:4-28
-97            <meta-data
-97-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:74:4-76:73
-98                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
-98-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:75:5-95
-99                android:value="com.google.firebase.components.ComponentRegistrar" />
-99-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:76:5-70
+18
+19    <uses-feature android:name="android.hardware.camera.autofocus" />
+19-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:12:2-67
+19-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:12:16-64
+20
+21    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+21-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:13:2-77
+21-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:13:19-74
+22    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+22-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:14:2-78
+22-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:14:19-75
+23    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+23-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:14:2-78
+23-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:14:19-75
+24    <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE" />
+24-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:16:2-79
+24-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:16:19-76
+25    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+25-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:13:2-77
+25-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:13:19-74
+26
+27    <permission
+27-->[androidx.core:core:1.9.0] C:\Users\W10\.gradle\caches\transforms-3\1da4e8a23665c9ed1c7bfc03cd9c78b4\transformed\core-1.9.0\AndroidManifest.xml:22:5-24:47
+28        android:name="com.ddev.prohealth.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+28-->[androidx.core:core:1.9.0] C:\Users\W10\.gradle\caches\transforms-3\1da4e8a23665c9ed1c7bfc03cd9c78b4\transformed\core-1.9.0\AndroidManifest.xml:23:9-81
+29        android:protectionLevel="signature" />
+29-->[androidx.core:core:1.9.0] C:\Users\W10\.gradle\caches\transforms-3\1da4e8a23665c9ed1c7bfc03cd9c78b4\transformed\core-1.9.0\AndroidManifest.xml:24:9-44
+30
+31    <uses-permission android:name="com.ddev.prohealth.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+31-->[androidx.core:core:1.9.0] C:\Users\W10\.gradle\caches\transforms-3\1da4e8a23665c9ed1c7bfc03cd9c78b4\transformed\core-1.9.0\AndroidManifest.xml:26:5-97
+31-->[androidx.core:core:1.9.0] C:\Users\W10\.gradle\caches\transforms-3\1da4e8a23665c9ed1c7bfc03cd9c78b4\transformed\core-1.9.0\AndroidManifest.xml:26:22-94
+32
+33    <application
+33-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:18:2-91:16
+34        android:allowBackup="true"
+34-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:19:3-29
+35        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+35-->[androidx.core:core:1.9.0] C:\Users\W10\.gradle\caches\transforms-3\1da4e8a23665c9ed1c7bfc03cd9c78b4\transformed\core-1.9.0\AndroidManifest.xml:28:18-86
+36        android:debuggable="true"
+37        android:extractNativeLibs="false"
+38        android:icon="@drawable/app_icon"
+38-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:20:3-36
+39        android:label="@string/app_name"
+39-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:21:3-35
+40        android:requestLegacyExternalStorage="true"
+40-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:22:3-46
+41        android:testOnly="true"
+42        android:theme="@style/AppTheme"
+42-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:24:3-34
+43        android:usesCleartextTraffic="true" >
+43-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:23:3-38
+44        <activity
+44-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:25:3-36:14
+45            android:name="com.ddev.prohealth.MainActivity"
+45-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:26:4-32
+46            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+46-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:27:4-97
+47            android:exported="true"
+47-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:31:4-27
+48            android:hardwareAccelerated="true"
+48-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:28:4-38
+49            android:screenOrientation="portrait"
+49-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:30:4-40
+50            android:supportsPictureInPicture="true" >
+50-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:29:4-43
+51            <intent-filter>
+51-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:32:4-35:20
+52                <action android:name="android.intent.action.MAIN" />
+52-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:33:5-57
+52-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:33:13-54
+53
+54                <category android:name="android.intent.category.LAUNCHER" />
+54-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:34:5-65
+54-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:34:15-62
+55            </intent-filter>
+56        </activity>
+57        <activity
+57-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:37:3-42:43
+58            android:name="com.ddev.prohealth.HomeActivity"
+58-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:38:4-32
+59            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+59-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:39:4-97
+60            android:hardwareAccelerated="true"
+60-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:40:4-38
+61            android:screenOrientation="portrait"
+61-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:42:4-40
+62            android:supportsPictureInPicture="true" />
+62-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:41:4-43
+63        <activity
+63-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:43:3-48:43
+64            android:name="com.ddev.prohealth.ViewActivity"
+64-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:44:4-32
+65            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+65-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:45:4-97
+66            android:hardwareAccelerated="true"
+66-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:46:4-38
+67            android:screenOrientation="portrait"
+67-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:48:4-40
+68            android:supportsPictureInPicture="true" />
+68-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:47:4-43
+69        <activity
+69-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:49:3-54:43
+70            android:name="com.ddev.prohealth.CameraActivity"
+70-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:50:4-34
+71            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+71-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:51:4-97
+72            android:hardwareAccelerated="true"
+72-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:52:4-38
+73            android:screenOrientation="portrait"
+73-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:54:4-40
+74            android:supportsPictureInPicture="true" />
+74-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:53:4-43
+75        <activity
+75-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:55:3-60:43
+76            android:name="com.ddev.prohealth.DetailActivity"
+76-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:56:4-34
+77            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+77-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:57:4-97
+78            android:hardwareAccelerated="true"
+78-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:58:4-38
+79            android:screenOrientation="portrait"
+79-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:60:4-40
+80            android:supportsPictureInPicture="true" />
+80-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:59:4-43
+81        <activity
+81-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:61:3-63:43
+82            android:name="com.ddev.prohealth.DebugActivity"
+82-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:62:4-33
+83            android:screenOrientation="portrait" />
+83-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:63:4-40
+84
+85        <meta-data
+85-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:64:3-66:60
+86            android:name="com.google.android.gms.version"
+86-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:65:4-49
+87            android:value="@integer/google_play_services_version" />
+87-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:66:4-57
+88
+89        <provider
+89-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:67:3-71:30
+90            android:name="com.google.firebase.provider.FirebaseInitProvider"
+90-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:68:4-68
+91            android:authorities="com.ddev.prohealth.firebaseinitprovider"
+91-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:69:4-65
+92            android:directBootAware="true"
+92-->[com.google.firebase:firebase-common:20.4.2] C:\Users\W10\.gradle\caches\transforms-3\09d410e74e84251ab52a7daa058203c3\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:26:13-43
+93            android:exported="false"
+93-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:70:4-28
+94            android:initOrder="100" />
+94-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:71:4-27
+95
+96        <service
+96-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:72:3-78:13
+97            android:name="com.google.firebase.components.ComponentDiscoveryService"
+97-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:73:4-75
+98            android:directBootAware="true"
+98-->[com.google.firebase:firebase-common:20.4.2] C:\Users\W10\.gradle\caches\transforms-3\09d410e74e84251ab52a7daa058203c3\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:32:13-43
+99            android:exported="false" >
+99-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:74:4-28
 100            <meta-data
-100-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\W10\.gradle\caches\transforms-3\35dd43ccc63853222f09a495678352a2\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:30:13-32:85
-101                android:name="com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar"
-101-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\W10\.gradle\caches\transforms-3\35dd43ccc63853222f09a495678352a2\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:31:17-118
+100-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:75:4-77:73
+101                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+101-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:76:5-95
 102                android:value="com.google.firebase.components.ComponentRegistrar" />
-102-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\W10\.gradle\caches\transforms-3\35dd43ccc63853222f09a495678352a2\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:32:17-82
+102-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:77:5-70
 103            <meta-data
-103-->[com.google.firebase:firebase-appcheck:17.1.0] C:\Users\W10\.gradle\caches\transforms-3\41e0a874b90b054982a28c03594ec46a\transformed\jetified-firebase-appcheck-17.1.0\AndroidManifest.xml:25:13-27:85
-104                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar"
-104-->[com.google.firebase:firebase-appcheck:17.1.0] C:\Users\W10\.gradle\caches\transforms-3\41e0a874b90b054982a28c03594ec46a\transformed\jetified-firebase-appcheck-17.1.0\AndroidManifest.xml:26:17-120
+103-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\W10\.gradle\caches\transforms-3\35dd43ccc63853222f09a495678352a2\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:30:13-32:85
+104                android:name="com.google.firebase.components:com.google.firebase.storage.FirebaseStorageKtxRegistrar"
+104-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\W10\.gradle\caches\transforms-3\35dd43ccc63853222f09a495678352a2\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:31:17-118
 105                android:value="com.google.firebase.components.ComponentRegistrar" />
-105-->[com.google.firebase:firebase-appcheck:17.1.0] C:\Users\W10\.gradle\caches\transforms-3\41e0a874b90b054982a28c03594ec46a\transformed\jetified-firebase-appcheck-17.1.0\AndroidManifest.xml:27:17-82
+105-->[com.google.firebase:firebase-storage:20.3.0] C:\Users\W10\.gradle\caches\transforms-3\35dd43ccc63853222f09a495678352a2\transformed\jetified-firebase-storage-20.3.0\AndroidManifest.xml:32:17-82
 106            <meta-data
-106-->[com.google.firebase:firebase-appcheck:17.1.0] C:\Users\W10\.gradle\caches\transforms-3\41e0a874b90b054982a28c03594ec46a\transformed\jetified-firebase-appcheck-17.1.0\AndroidManifest.xml:28:13-30:85
-107                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar"
-107-->[com.google.firebase:firebase-appcheck:17.1.0] C:\Users\W10\.gradle\caches\transforms-3\41e0a874b90b054982a28c03594ec46a\transformed\jetified-firebase-appcheck-17.1.0\AndroidManifest.xml:29:17-117
+106-->[com.google.firebase:firebase-appcheck:17.1.0] C:\Users\W10\.gradle\caches\transforms-3\41e0a874b90b054982a28c03594ec46a\transformed\jetified-firebase-appcheck-17.1.0\AndroidManifest.xml:25:13-27:85
+107                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckKtxRegistrar"
+107-->[com.google.firebase:firebase-appcheck:17.1.0] C:\Users\W10\.gradle\caches\transforms-3\41e0a874b90b054982a28c03594ec46a\transformed\jetified-firebase-appcheck-17.1.0\AndroidManifest.xml:26:17-120
 108                android:value="com.google.firebase.components.ComponentRegistrar" />
-108-->[com.google.firebase:firebase-appcheck:17.1.0] C:\Users\W10\.gradle\caches\transforms-3\41e0a874b90b054982a28c03594ec46a\transformed\jetified-firebase-appcheck-17.1.0\AndroidManifest.xml:30:17-82
+108-->[com.google.firebase:firebase-appcheck:17.1.0] C:\Users\W10\.gradle\caches\transforms-3\41e0a874b90b054982a28c03594ec46a\transformed\jetified-firebase-appcheck-17.1.0\AndroidManifest.xml:27:17-82
 109            <meta-data
-109-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\W10\.gradle\caches\transforms-3\942816d03cfbca6d9ce00ee4bc64f9d2\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:12:13-14:85
-110                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
-110-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\W10\.gradle\caches\transforms-3\942816d03cfbca6d9ce00ee4bc64f9d2\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:13:17-116
+109-->[com.google.firebase:firebase-appcheck:17.1.0] C:\Users\W10\.gradle\caches\transforms-3\41e0a874b90b054982a28c03594ec46a\transformed\jetified-firebase-appcheck-17.1.0\AndroidManifest.xml:28:13-30:85
+110                android:name="com.google.firebase.components:com.google.firebase.appcheck.FirebaseAppCheckRegistrar"
+110-->[com.google.firebase:firebase-appcheck:17.1.0] C:\Users\W10\.gradle\caches\transforms-3\41e0a874b90b054982a28c03594ec46a\transformed\jetified-firebase-appcheck-17.1.0\AndroidManifest.xml:29:17-117
 111                android:value="com.google.firebase.components.ComponentRegistrar" />
-111-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\W10\.gradle\caches\transforms-3\942816d03cfbca6d9ce00ee4bc64f9d2\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:14:17-82
+111-->[com.google.firebase:firebase-appcheck:17.1.0] C:\Users\W10\.gradle\caches\transforms-3\41e0a874b90b054982a28c03594ec46a\transformed\jetified-firebase-appcheck-17.1.0\AndroidManifest.xml:30:17-82
 112            <meta-data
-112-->[com.google.firebase:firebase-common:20.4.2] C:\Users\W10\.gradle\caches\transforms-3\09d410e74e84251ab52a7daa058203c3\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:35:13-37:85
-113                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
-113-->[com.google.firebase:firebase-common:20.4.2] C:\Users\W10\.gradle\caches\transforms-3\09d410e74e84251ab52a7daa058203c3\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:36:17-109
+112-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\W10\.gradle\caches\transforms-3\942816d03cfbca6d9ce00ee4bc64f9d2\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:12:13-14:85
+113                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+113-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\W10\.gradle\caches\transforms-3\942816d03cfbca6d9ce00ee4bc64f9d2\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:13:17-116
 114                android:value="com.google.firebase.components.ComponentRegistrar" />
-114-->[com.google.firebase:firebase-common:20.4.2] C:\Users\W10\.gradle\caches\transforms-3\09d410e74e84251ab52a7daa058203c3\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:37:17-82
-115        </service>
-116
-117        <provider
-117-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:78:3-86:14
-118            android:name="androidx.core.content.FileProvider"
-118-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:80:4-53
-119            android:authorities="com.ddev.prohealth.provider"
-119-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:79:4-53
-120            android:exported="false"
-120-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:81:4-28
-121            android:grantUriPermissions="true" >
-121-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:82:4-38
-122            <meta-data
-122-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:83:4-85:46
-123                android:name="android.support.FILE_PROVIDER_PATHS"
-123-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:84:5-55
-124                android:resource="@xml/provider_paths" />
-124-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:85:5-43
-125        </provider>
-126
-127        <uses-library
-127-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:87:3-89:31
-128            android:name="org.apache.http.legacy"
-128-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:88:4-41
-129            android:required="false" />
-129-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:89:4-28
-130
-131        <activity
-131-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\W10\.gradle\caches\transforms-3\d4a5750f2d7876d2d7b79fb5a8fb5abe\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
-132            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-132-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\W10\.gradle\caches\transforms-3\d4a5750f2d7876d2d7b79fb5a8fb5abe\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
-133            android:exported="false"
-133-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\W10\.gradle\caches\transforms-3\d4a5750f2d7876d2d7b79fb5a8fb5abe\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
-134            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-134-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\W10\.gradle\caches\transforms-3\d4a5750f2d7876d2d7b79fb5a8fb5abe\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
-135
-136        <provider
-136-->[androidx.emoji2:emoji2:1.2.0] C:\Users\W10\.gradle\caches\transforms-3\c203f188ec06737c558c2f227241dc5b\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
-137            android:name="androidx.startup.InitializationProvider"
-137-->[androidx.emoji2:emoji2:1.2.0] C:\Users\W10\.gradle\caches\transforms-3\c203f188ec06737c558c2f227241dc5b\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
-138            android:authorities="com.ddev.prohealth.androidx-startup"
-138-->[androidx.emoji2:emoji2:1.2.0] C:\Users\W10\.gradle\caches\transforms-3\c203f188ec06737c558c2f227241dc5b\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
-139            android:exported="false" >
-139-->[androidx.emoji2:emoji2:1.2.0] C:\Users\W10\.gradle\caches\transforms-3\c203f188ec06737c558c2f227241dc5b\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
-140            <meta-data
-140-->[androidx.emoji2:emoji2:1.2.0] C:\Users\W10\.gradle\caches\transforms-3\c203f188ec06737c558c2f227241dc5b\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
-141                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-141-->[androidx.emoji2:emoji2:1.2.0] C:\Users\W10\.gradle\caches\transforms-3\c203f188ec06737c558c2f227241dc5b\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
-142                android:value="androidx.startup" />
-142-->[androidx.emoji2:emoji2:1.2.0] C:\Users\W10\.gradle\caches\transforms-3\c203f188ec06737c558c2f227241dc5b\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+114-->[com.google.firebase:firebase-common-ktx:20.4.2] C:\Users\W10\.gradle\caches\transforms-3\942816d03cfbca6d9ce00ee4bc64f9d2\transformed\jetified-firebase-common-ktx-20.4.2\AndroidManifest.xml:14:17-82
+115            <meta-data
+115-->[com.google.firebase:firebase-common:20.4.2] C:\Users\W10\.gradle\caches\transforms-3\09d410e74e84251ab52a7daa058203c3\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:35:13-37:85
+116                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+116-->[com.google.firebase:firebase-common:20.4.2] C:\Users\W10\.gradle\caches\transforms-3\09d410e74e84251ab52a7daa058203c3\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:36:17-109
+117                android:value="com.google.firebase.components.ComponentRegistrar" />
+117-->[com.google.firebase:firebase-common:20.4.2] C:\Users\W10\.gradle\caches\transforms-3\09d410e74e84251ab52a7daa058203c3\transformed\jetified-firebase-common-20.4.2\AndroidManifest.xml:37:17-82
+118        </service>
+119
+120        <provider
+120-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:79:3-87:14
+121            android:name="androidx.core.content.FileProvider"
+121-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:81:4-53
+122            android:authorities="com.ddev.prohealth.provider"
+122-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:80:4-53
+123            android:exported="false"
+123-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:82:4-28
+124            android:grantUriPermissions="true" >
+124-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:83:4-38
+125            <meta-data
+125-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:84:4-86:46
+126                android:name="android.support.FILE_PROVIDER_PATHS"
+126-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:85:5-55
+127                android:resource="@xml/provider_paths" />
+127-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:86:5-43
+128        </provider>
+129
+130        <uses-library
+130-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:88:3-90:31
+131            android:name="org.apache.http.legacy"
+131-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:89:4-41
+132            android:required="false" />
+132-->C:\Users\W10\Documents\mobile\prohealth\app\src\main\AndroidManifest.xml:90:4-28
+133
+134        <activity
+134-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\W10\.gradle\caches\transforms-3\d4a5750f2d7876d2d7b79fb5a8fb5abe\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+135            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+135-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\W10\.gradle\caches\transforms-3\d4a5750f2d7876d2d7b79fb5a8fb5abe\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+136            android:exported="false"
+136-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\W10\.gradle\caches\transforms-3\d4a5750f2d7876d2d7b79fb5a8fb5abe\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+137            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+137-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\W10\.gradle\caches\transforms-3\d4a5750f2d7876d2d7b79fb5a8fb5abe\transformed\jetified-play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+138
+139        <provider
+139-->[androidx.emoji2:emoji2:1.2.0] C:\Users\W10\.gradle\caches\transforms-3\c203f188ec06737c558c2f227241dc5b\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+140            android:name="androidx.startup.InitializationProvider"
+140-->[androidx.emoji2:emoji2:1.2.0] C:\Users\W10\.gradle\caches\transforms-3\c203f188ec06737c558c2f227241dc5b\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:25:13-67
+141            android:authorities="com.ddev.prohealth.androidx-startup"
+141-->[androidx.emoji2:emoji2:1.2.0] C:\Users\W10\.gradle\caches\transforms-3\c203f188ec06737c558c2f227241dc5b\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:26:13-68
+142            android:exported="false" >
+142-->[androidx.emoji2:emoji2:1.2.0] C:\Users\W10\.gradle\caches\transforms-3\c203f188ec06737c558c2f227241dc5b\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:27:13-37
 143            <meta-data
-143-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\W10\.gradle\caches\transforms-3\9da266c87e36cebe0faaf2f5063e7d9f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
-144                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-144-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\W10\.gradle\caches\transforms-3\9da266c87e36cebe0faaf2f5063e7d9f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+143-->[androidx.emoji2:emoji2:1.2.0] C:\Users\W10\.gradle\caches\transforms-3\c203f188ec06737c558c2f227241dc5b\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+144                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+144-->[androidx.emoji2:emoji2:1.2.0] C:\Users\W10\.gradle\caches\transforms-3\c203f188ec06737c558c2f227241dc5b\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:30:17-75
 145                android:value="androidx.startup" />
-145-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\W10\.gradle\caches\transforms-3\9da266c87e36cebe0faaf2f5063e7d9f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
-146        </provider>
-147    </application>
-148
-149</manifest>
+145-->[androidx.emoji2:emoji2:1.2.0] C:\Users\W10\.gradle\caches\transforms-3\c203f188ec06737c558c2f227241dc5b\transformed\jetified-emoji2-1.2.0\AndroidManifest.xml:31:17-49
+146            <meta-data
+146-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\W10\.gradle\caches\transforms-3\9da266c87e36cebe0faaf2f5063e7d9f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+147                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+147-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\W10\.gradle\caches\transforms-3\9da266c87e36cebe0faaf2f5063e7d9f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+148                android:value="androidx.startup" />
+148-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\W10\.gradle\caches\transforms-3\9da266c87e36cebe0faaf2f5063e7d9f\transformed\jetified-lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+149        </provider>
+150    </application>
+151
+152</manifest>
