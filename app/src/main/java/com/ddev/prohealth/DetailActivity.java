@@ -1,10 +1,15 @@
 package com.ddev.prohealth;
 
+import static android.text.Layout.JUSTIFICATION_MODE_INTER_WORD;
+
 import android.graphics.Typeface;
+import android.graphics.text.LineBreaker;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
 import android.util.SparseBooleanArray;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -13,7 +18,6 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.google.firebase.FirebaseApp;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -32,115 +36,108 @@ public class DetailActivity extends AppCompatActivity {
 	
 	private LinearLayout linear1;
 	private LinearLayout linear2;
-	private TextView textview1;
 	private TextView textview2;
-	
+	private TextView fruit1;
+	private TextView fruit2;
+	private TextView fruit3;
+	private TextView fruit4;
+	private TextView fruit5;
+	private TextView fruit6;
+	private TextView fruit7;
+	private TextView fruit8;
+	private TextView fruit9;
+	private TextView fruit10;
+
+
 	@Override
 	protected void onCreate(Bundle _savedInstanceState) {
 		super.onCreate(_savedInstanceState);
 		setContentView(R.layout.detail);
 		initialize(_savedInstanceState);
-		FirebaseApp.initializeApp(this);
 		initializeLogic();
 	}
 	
 	private void initialize(Bundle _savedInstanceState) {
 		linear1 = findViewById(R.id.linear1);
 		linear2 = findViewById(R.id.linear2);
-		textview1 = findViewById(R.id.textview1);
 		textview2 = findViewById(R.id.detectedTitle);
+		fruit1 = findViewById(R.id.fruit1);
+		fruit2 = findViewById(R.id.fruit2);
+		fruit3 = findViewById(R.id.fruit3);
+		fruit4 = findViewById(R.id.fruit4);
+		fruit5 = findViewById(R.id.fruit5);
+		fruit6 = findViewById(R.id.fruit6);
+		fruit7 = findViewById(R.id.fruit7);
+		fruit8 = findViewById(R.id.fruit8);
+		fruit9 = findViewById(R.id.fruit9);
+		fruit10 = findViewById(R.id.fruit10);
 	}
 	
 	private void initializeLogic() {
-		textview1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.NORMAL);
+		StringBuilder t = new StringBuilder();
 		textview2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montbold.ttf"), Typeface.NORMAL);
-		_firsletter(textview2, getIntent().getStringExtra("name"));
-		try {
-			    JSONArray fruitsArray = new JSONArray(_loadFromAsset());
-			    for (int i = 0; i < fruitsArray.length(); i++) {
-				        JSONObject fruitObject = fruitsArray.getJSONObject(i);
-				        if (getIntent().getStringExtra("name").trim().equals(fruitObject.getString("name").trim())) {
-					            String name = fruitObject.getString("name");
-					            String description = fruitObject.getString("description");
-					            String history = fruitObject.getString("history");
-					            String effects = fruitObject.getString("effects");
-					
-					            JSONArray nutrientsArray = fruitObject.getJSONArray("nutrients");
-					            StringBuilder combine = new StringBuilder();
-					
-					            for (int j = 0; j < nutrientsArray.length(); j++) {
-						                JSONObject nutrientObject = nutrientsArray.getJSONObject(j);
-						
-						                if (getIntent().getStringExtra("name").trim().equals(name.trim())) {
-							                    String nutrientTitle = nutrientObject.getString("title");
-							                    String nutrientContent = nutrientObject.getString("content");
-							
-												combine.append("<br/><b><h2>").append(nutrientTitle).append("</h2></b>").append(nutrientContent);
-							                }
-						            }
-					
-					            if (getIntent().getStringExtra("detail").equals("nutrient")) {
-										textview1.setText(Html.fromHtml("<b><h2>Nutrients</h2></b>" + combine.toString()));
-						            } else if (getIntent().getStringExtra("detail").equals("description")) {
-										textview1.setText(Html.fromHtml("<br/><b><h2>Description</h2></b>" + description + "<br/><br/><b><h2>History</h2></b>" + history));
-						            } else if (getIntent().getStringExtra("detail").equals("effect")) {
-										textview1.setText(Html.fromHtml("<b><h2>Effects</h2></b><br/>" + effects));
-						            }
-					        }
-				    }
-		} catch (JSONException e) {
-			    e.printStackTrace();
-		}
-	}
-	public void _firsletter(final TextView _textview, final String _text) {
-				String text_textview = _text;
-					String firstLetter_textview = text_textview.substring(0, 1);
-					    String remainingLetters_textview = text_textview.substring(1, text_textview.length());
-					
-					    // change the first letter to uppercase
-					    firstLetter_textview = firstLetter_textview.toUpperCase();
-					
-					    // join the two substrings
-					    text_textview = firstLetter_textview + remainingLetters_textview;
-					
-					_textview.setText(text_textview);
+		String[] fruits = getIntent().getStringArrayExtra("name");
+		String fruitLengthString = String.valueOf(fruits.length);
+		int fruitsLength = Integer.parseInt(fruitLengthString);
+		TextView[] textview1 = new TextView[fruits.length];
+		int[] textViewIds = new int[]{R.id.fruit1, R.id.fruit2,R.id.fruit3,R.id.fruit4,R.id.fruit5,R.id.fruit6,R.id.fruit7,R.id.fruit8,R.id.fruit9,R.id.fruit10};
+		for (int k = 0; k < fruitsLength; k++) {
+			String currentFruit = fruits[k];
+			t.append(fruits.length);
+			textview1[k] = findViewById(textViewIds[k]);
+			if (currentFruit != null) {
+				textview1[k].setTypeface(Typeface.createFromAsset(getAssets(), "fonts/montreg.ttf"), Typeface.NORMAL);
 
+				try {
+					JSONArray fruitsArray = new JSONArray(_loadFromAsset());
+					for (int i = 0; i < fruitsArray.length(); i++) {
+						JSONObject fruitObject = fruitsArray.getJSONObject(i);
+						if (currentFruit.trim().equals(fruitObject.getString("name").trim())) {
+							String name = fruitObject.getString("name");
+							String description = fruitObject.getString("description");
+							String history = fruitObject.getString("history");
+							String effects = fruitObject.getString("effects");
+
+
+							JSONArray nutrientsArray = fruitObject.getJSONArray("nutrients");
+							StringBuilder combine = new StringBuilder();
+							StringBuilder combine2 = new StringBuilder();
+							combine.append("<b><h1>").append(name.substring(0, 1).toUpperCase() + name.substring(1)).append("</b></h1>");
+							for (int j = 0; j < nutrientsArray.length(); j++) {
+								JSONObject nutrientObject = nutrientsArray.getJSONObject(j);
+
+								if (currentFruit.trim().equals(name.trim())) {
+									String nutrientTitle = nutrientObject.getString("title");
+									String nutrientContent = nutrientObject.getString("content");
+
+									combine.append("<br/><b><p>").append(nutrientTitle).append("</p></b>").append(nutrientContent);
+								}
+							}
+							textview1[k].setGravity(Gravity.CENTER);
+							if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+								textview1[k].setJustificationMode(LineBreaker.JUSTIFICATION_MODE_INTER_WORD);
+							}
+							String title = combine2.append("<b><h1>").append(name.substring(0, 1).toUpperCase() + name.substring(1)).append("</b></h1>").toString();
+							if (getIntent().getStringExtra("detail").equals("nutrient")) {
+								textview2.setText(Html.fromHtml("<b><h2>Nutrients</h2></b>"));
+								textview1[k].setText(Html.fromHtml(combine.toString()));
+							} else if (getIntent().getStringExtra("detail").equals("description")) {
+								textview2.setText(Html.fromHtml("<br/><b><h2>Description and History</h2></b>"));
+								textview1[k].setText(Html.fromHtml("<b><h1>" + title + "</h1></b><br/>" + "<br/><b><h2>Description</h2></b>" + description + "<br/><br/><b><h2>History</h2></b>" + history));
+							} else if (getIntent().getStringExtra("detail").equals("effect")) {
+								textview2.setText(Html.fromHtml("<b><h2>Effects</h2></b><br/>"));
+								textview1[k].setText(Html.fromHtml("<b><h1>" + title + "</h1></b><br/><br/>" + effects));
+							}
+						}
+					}
+				} catch (JSONException e) {
+					e.printStackTrace();
+				}
+			} else {
+				textview1[k].setVisibility(View.GONE);
+			}
 		}
-		
-		
-		public void _capitalizeFirstEveryWord(final TextView _textview, final String _text) {
-					// create a string
-					    String text_textview = _text;
-					
-					    // stores each characters to a char array
-					    char[] charArray_textview = text_textview.toCharArray();
-					    boolean foundSpace_textview = true;
-					
-					    for(int i = 0; i < charArray_textview.length; i++) {
-									
-									      // if the array element is a letter
-									      if(Character.isLetter(charArray_textview[i])) {
-													
-													        // check space is present before the letter
-													        if(foundSpace_textview) {
-																	
-																	          // change the letter into uppercase
-																	          charArray_textview[i] = Character.toUpperCase(charArray_textview[i]);
-																	          foundSpace_textview = false;
-																	        }
-													      }
-									
-									      else {
-													        // if the new character is not character
-													        foundSpace_textview = true;
-													      }
-									    }
-					    // convert the char array to the string
-					    text_textview = String.valueOf(charArray_textview);
-					_textview.setText(text_textview);
-		}
-	
-	{
+
 	}
 	
 	public String _loadFromAsset() {

@@ -12,6 +12,10 @@
         "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\calendar.png"
     },
     {
+        "merged": "com.ddev.prohealth.app-merged_res-32:/layout_detail.xml.flat",
+        "source": "com.ddev.prohealth.app-main-34:/layout/detail.xml"
+    },
+    {
         "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\layout_camera.xml.flat",
         "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\layout\\camera.xml"
     },
@@ -20,16 +24,16 @@
         "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\bottom_nav_4.png"
     },
     {
-        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_circle_filled.png.flat",
-        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\circle_filled.png"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_refresh.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\refresh.png"
     },
     {
         "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_close.png.flat",
         "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\close.png"
     },
     {
-        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_refresh.png.flat",
-        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\refresh.png"
+        "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\drawable-xhdpi_circle_filled.png.flat",
+        "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\drawable-xhdpi\\circle_filled.png"
     },
     {
         "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\layout_detail.xml.flat",
@@ -42,10 +46,6 @@
     {
         "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\layout_activity_debug.xml.flat",
         "source": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-main-34:\\layout\\activity_debug.xml"
-    },
-    {
-        "merged": "com.ddev.prohealth.app-merged_res-32:/layout_view.xml.flat",
-        "source": "com.ddev.prohealth.app-main-34:/layout/view.xml"
     },
     {
         "merged": "C:\\Users\\W10\\.gradle\\daemon\\7.5.1\\com.ddev.prohealth.app-merged_res-32:\\xml_provider_paths.xml.flat",

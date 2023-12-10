@@ -2,6 +2,7 @@ package com.ddev.prohealth;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.Uri;
@@ -21,7 +22,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.airbnb.lottie.LottieAnimationView;
 import com.ddev.prohealth.detection.Classifier;
 import com.ddev.prohealth.detection.TensorFlowImageClassifier;
-import com.google.firebase.FirebaseApp;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -62,8 +62,6 @@ public class ViewActivity extends AppCompatActivity {
 	private TextView textview4;
 	private TextView textview6;
 	private TextView textview8;
-	private TextView accuracyTitle;
-	private TextView accuracyLabel;
 	private ImageView bitmapImage;
 	private Intent i = new Intent();
 	private TimerTask t;
@@ -76,13 +74,14 @@ public class ViewActivity extends AppCompatActivity {
 
 	private Executor executor = Executors.newSingleThreadExecutor();
 	private String path;
+	private Bitmap bitmap;
+	private String[] name = new String[10];
 
 	@Override
 	protected void onCreate(Bundle _savedInstanceState) {
 		super.onCreate(_savedInstanceState);
 		setContentView(R.layout.view);
 		initialize(_savedInstanceState);
-		FirebaseApp.initializeApp(this);
 		initializeLogic();
 	}
 	
@@ -90,8 +89,6 @@ public class ViewActivity extends AppCompatActivity {
 		linear2 = findViewById(R.id.linear2);
 		linear3 = findViewById(R.id.linear3);
 		linear4 = findViewById(R.id.linearDetected);
-		accuracyTitle = findViewById(R.id.accuracyTitle);
-		accuracyLabel = findViewById(R.id.accuracy);
 		linear5 = findViewById(R.id.linear5);
 		linear6 = findViewById(R.id.linear6);
 		linear8 = findViewById(R.id.linear8);
@@ -113,7 +110,7 @@ public class ViewActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View _view) {
 				i.setClass(getApplicationContext(), DetailActivity.class);
-				i.putExtra("name", textview3.getText().toString().toLowerCase());
+				i.putExtra("name", name);
 				i.putExtra("detail", "nutrient");
 				startActivity(i);
 			}
@@ -123,7 +120,7 @@ public class ViewActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View _view) {
 				i.setClass(getApplicationContext(), DetailActivity.class);
-				i.putExtra("name", textview3.getText().toString().toLowerCase());
+				i.putExtra("name", name);
 				i.putExtra("detail", "description");
 				startActivity(i);
 			}
@@ -133,7 +130,7 @@ public class ViewActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View _view) {
 				i.setClass(getApplicationContext(), DetailActivity.class);
-				i.putExtra("name", textview3.getText().toString().toLowerCase());
+				i.putExtra("name", name);
 				i.putExtra("detail", "effect");
 				startActivity(i);
 			}
@@ -145,12 +142,10 @@ public class ViewActivity extends AppCompatActivity {
 		textview1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montbold.ttf"), Typeface.NORMAL);
 		textview2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.BOLD);
 		textview3.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.NORMAL);
-		accuracyLabel.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.NORMAL);
 		textview4.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.BOLD);
 		textview6.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.BOLD);
 		textview8.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.BOLD);
 		textview2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.BOLD);
-		accuracyTitle.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.BOLD);
 		_rippleRoundStroke(linear5, "#fefefe", "#e0e0e0", 25, 2.5d, "#e0e0e0");
 		_rippleRoundStroke(linear6, "#008073", "#fefefe", 25, 0, "#fefefe");
 		_rippleRoundStroke(linear8, "#008073", "#fefefe", 25, 0, "#fefefe");
@@ -159,20 +154,31 @@ public class ViewActivity extends AppCompatActivity {
 		initTensorFlowAndLoadModel();
 		bitmapImage.setVisibility(View.GONE);
 		path = getIntent().getStringExtra("img");
-		Bitmap bitmap = URItoBitmap.URItoBitmap(this, Uri.parse(path));
+		if (getIntent().getStringExtra("type").trim().equals("file".trim())) {
+			 bitmap = URItoBitmap.URItoBitmap(this, Uri.parse(path));
+		} else {
+			File imgFile = new File(path);
+			bitmap = BitmapFactory.decodeFile(imgFile.getAbsolutePath());
+		}
 		bitmap = Bitmap.createScaledBitmap(bitmap, INPUT_SIZE, INPUT_SIZE, false);
 		imageview1.setImageBitmap(bitmap);
+
+	}
+	@Override
+	protected void onStart() {
 		final List<Classifier.Recognition> results = classifier.recognizeImage(bitmap);
 		StringBuilder combinedTitles = new StringBuilder();
-		StringBuilder combinedAccuracy = new StringBuilder();
+		int i = 0;
 		for (Classifier.Recognition result : results) {
 			String title = result.getTitle();
 			float accuracy = result.getConfidence();
-			combinedTitles.append(title).append("\n");
-			combinedAccuracy.append(String.format("%.2f%% ", accuracy * 100.0f)).append("\n");
+			combinedTitles.append(title).append(" - ").append(String.format("%.2f%% ", accuracy * 100.0f)).append("\n");
+			name[i] = title;
+			i++;
 		}
 		_firsletter(textview3, combinedTitles.toString());
-		accuracyLabel.setText(combinedAccuracy.toString());
+
+		super.onStart();
 	}
 	
 	public void _firsletter(final TextView _textview, final String _text) {

@@ -1872,8 +1872,6 @@ id accessibility_custom_action_6
 id accessibility_custom_action_7
 id accessibility_custom_action_8
 id accessibility_custom_action_9
-id accuracy
-id accuracyTitle
 id action_bar
 id action_bar_activity_content
 id action_bar_container
@@ -2004,6 +2002,16 @@ id flip
 id floating
 id forever
 id fragment_container_view_tag
+id fruit1
+id fruit10
+id fruit2
+id fruit3
+id fruit4
+id fruit5
+id fruit6
+id fruit7
+id fruit8
+id fruit9
 id ghost_view
 id ghost_view_holder
 id gone
@@ -2049,7 +2057,6 @@ id linear5
 id linear6
 id linear7
 id linear8
-id linearAccuracy
 id linearDetected
 id listMode
 id list_item
@@ -2276,6 +2283,7 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
+id vscroll1
 id wide
 id withText
 id withinBounds

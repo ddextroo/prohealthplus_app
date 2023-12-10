@@ -4,9 +4,7 @@ import android.graphics.Bitmap;
 
 import java.util.List;
 
-/**
- * Created by amitshekhar on 17/03/18.
- */
+
 
 public interface Classifier {
 

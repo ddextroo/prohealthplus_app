@@ -2,16 +2,12 @@ package com.ddev.prohealth;
 
 import android.Manifest;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.provider.OpenableColumns;
 import android.util.SparseBooleanArray;
 import android.util.TypedValue;
 import android.view.View;
@@ -26,35 +22,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import com.google.android.gms.tasks.Continuation;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.storage.FileDownloadTask;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.OnProgressListener;
-import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
-
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Random;
 
 
 public class HomeActivity extends AppCompatActivity {
 	
-	private FirebaseStorage _firebase_storage = FirebaseStorage.getInstance();
-	
+
 	private String filePath = "";
 	private String dataPath = "";
 	private String fileName = "";
@@ -80,8 +54,7 @@ public class HomeActivity extends AppCompatActivity {
 		super.onCreate(_savedInstanceState);
 		setContentView(R.layout.home);
 		initialize(_savedInstanceState);
-		FirebaseApp.initializeApp(this);
-		
+
 		if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED
 		|| ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
 			ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.READ_EXTERNAL_STORAGE, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 1000);
@@ -140,6 +113,7 @@ public class HomeActivity extends AppCompatActivity {
 
 			i.setClass(getApplicationContext(), ViewActivity.class);
 			i.putExtra("img", selectedImageUri.toString());
+			i.putExtra("type", "file");
 			startActivity(i);
 
 			// Alternatively, you can get the file path from the URI

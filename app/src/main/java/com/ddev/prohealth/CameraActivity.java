@@ -33,17 +33,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 
-import com.google.android.gms.tasks.Continuation;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.storage.FileDownloadTask;
-import com.google.firebase.storage.FirebaseStorage;
-import com.google.firebase.storage.OnProgressListener;
-import com.google.firebase.storage.StorageReference;
-import com.google.firebase.storage.UploadTask;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -53,8 +42,7 @@ public class CameraActivity extends AppCompatActivity {
 	
 	public final int REQ_CD_CAM = 101;
 	
-	private FirebaseStorage _firebase_storage = FirebaseStorage.getInstance();
-	
+
 	private String filepath = "";
 	private String filename = "";
 	
@@ -75,8 +63,7 @@ public class CameraActivity extends AppCompatActivity {
 		super.onCreate(_savedInstanceState);
 		setContentView(R.layout.camera);
 		initialize(_savedInstanceState);
-		FirebaseApp.initializeApp(this);
-		
+
 		if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_DENIED
 		|| ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED
 		|| ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
@@ -122,11 +109,12 @@ public class CameraActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View _view) {
 				if (filepath.equals("")) {
-					SketchwareUtil.showMessage(getApplicationContext(), "Image must be captured");
+					Tools.showMessage(getApplicationContext(), "Image must be captured");
 				}
 				else {
 					i.setClass(getApplicationContext(), ViewActivity.class);
 					i.putExtra("img", filepath);
+					i.putExtra("type", "cam");
 					startActivity(i);
 				}
 			}
