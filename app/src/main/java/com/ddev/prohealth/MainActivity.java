@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 				runOnUiThread(new Runnable() {
 					@Override
 					public void run() {
-						i.setClass(getApplicationContext(), HomeActivity.class);
+						i.setClass(getApplicationContext(), UserInfoActivity.class);
 						startActivity(i);
 						finish();
 					}

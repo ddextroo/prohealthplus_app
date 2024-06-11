@@ -1,10 +1,20 @@
-apple
-banana
-carrot
-corn
-eggplant
-garlic
-mango
-orange
-pineapple
-potato
+0 apple
+1 banana
+2 corn
+3 eggplant
+4 potato
+5 mango
+6 garlic
+7 pineapple
+8 orange
+9 carrot
+10 tomato
+11 watermelon
+12 cabbage
+13 radish
+14 pomegranate
+15 lemon
+16 grapes
+17 ginger
+18 cucumber
+19 bell pepper

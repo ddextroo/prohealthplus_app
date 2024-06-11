@@ -67,6 +67,12 @@
             android:screenOrientation="portrait"
             android:supportsPictureInPicture="true" />
         <activity
+            android:name="com.ddev.prohealth.UserInfoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:screenOrientation="portrait"
+            android:supportsPictureInPicture="true" />
+        <activity
             android:name="com.ddev.prohealth.CameraActivity"
             android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
             android:hardwareAccelerated="true"

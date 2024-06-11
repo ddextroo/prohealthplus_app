@@ -4,129 +4,22 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
+	android:padding="5dp"
 	android:orientation="vertical">
 
-	<ScrollView
-		android:id="@+id/vscroll1"
+	<TextView
+		android:id="@+id/detectedTitle"
 		android:layout_width="match_parent"
-		android:scrollbars="none"
-		android:layout_height="match_parent">
+		android:layout_height="wrap_content"
+		android:layout_margin="10dp"
+		android:paddingBottom="10dp"
+		android:textColor="#171717"
+		android:textSize="16sp"
+		android:textStyle="bold" />
 
-		<LinearLayout
-			android:id="@+id/linear1"
-			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:background="#FEFEFE"
-			android:orientation="vertical"
-			android:padding="8dp">
-
-			<LinearLayout
-				android:id="@+id/linear2"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:gravity="center_horizontal|center_vertical"
-				android:orientation="horizontal"
-				android:padding="8dp">
-
-				<TextView
-					android:id="@+id/detectedTitle"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:padding="8dp"
-					android:text="TextView"
-					android:textColor="#333333"
-					android:textSize="20sp" />
-			</LinearLayout>
-
-			<TextView
-				android:id="@+id/fruit1"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:padding="8dp"
-				android:text="TextView"
-				android:textColor="#000000"
-				android:textSize="12sp" />
-
-			<TextView
-				android:id="@+id/fruit2"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:padding="8dp"
-				android:text="TextView"
-				android:textColor="#000000"
-				android:textSize="12sp" />
-
-			<TextView
-				android:id="@+id/fruit3"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:padding="8dp"
-				android:text="TextView"
-				android:textColor="#000000"
-				android:textSize="12sp" />
-
-			<TextView
-				android:id="@+id/fruit4"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:padding="8dp"
-				android:text="TextView"
-				android:textColor="#000000"
-				android:textSize="12sp" />
-
-			<TextView
-				android:id="@+id/fruit5"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:padding="8dp"
-				android:text="TextView"
-				android:textColor="#000000"
-				android:textSize="12sp" />
-
-			<TextView
-				android:id="@+id/fruit6"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:padding="8dp"
-				android:text="TextView"
-				android:textColor="#000000"
-				android:textSize="12sp" />
-
-			<TextView
-				android:id="@+id/fruit7"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:padding="8dp"
-				android:text="TextView"
-				android:textColor="#000000"
-				android:textSize="12sp" />
-
-			<TextView
-				android:id="@+id/fruit8"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:padding="8dp"
-				android:text="TextView"
-				android:textColor="#000000"
-				android:textSize="12sp" />
-
-			<TextView
-				android:id="@+id/fruit9"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:padding="8dp"
-				android:text="TextView"
-				android:textColor="#000000"
-				android:textSize="12sp" />
-
-			<TextView
-				android:id="@+id/fruit10"
-				android:layout_width="match_parent"
-				android:layout_height="wrap_content"
-				android:padding="8dp"
-				android:text="TextView"
-				android:textColor="#000000"
-				android:textSize="12sp" />
-		</LinearLayout>
-	</ScrollView>
+	<androidx.recyclerview.widget.RecyclerView
+		android:id="@+id/recyclerView"
+		android:layout_width="match_parent"
+		android:overScrollMode="never"
+		android:layout_height="match_parent" />
 </LinearLayout>

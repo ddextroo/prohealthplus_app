@@ -47,6 +47,12 @@
 			android:supportsPictureInPicture="true"
 			android:screenOrientation="portrait" />
 		<activity
+			android:name=".UserInfoActivity"
+			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+			android:hardwareAccelerated="true"
+			android:supportsPictureInPicture="true"
+			android:screenOrientation="portrait" />
+		<activity
 			android:name=".CameraActivity"
 			android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
 			android:hardwareAccelerated="true"

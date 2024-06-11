@@ -36,6 +36,7 @@ dependencies {
 	implementation 'com.google.code.gson:gson:2.8.7'
 	implementation 'com.squareup.okhttp3:okhttp:4.4.0'
 	implementation 'com.airbnb.android:lottie:6.2.0'
+	implementation 'androidx.recyclerview:recyclerview:1.2.1'
 
 	implementation 'org.tensorflow:tensorflow-lite:2.7.0'
 }

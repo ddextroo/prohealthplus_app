@@ -1923,6 +1923,7 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
+id checkBox
 id checkbox
 id checked
 id chip
@@ -1980,6 +1981,7 @@ id dropdown_menu
 id easeIn
 id easeInOut
 id easeOut
+id editText
 id edit_query
 id elastic
 id enabled
@@ -2002,16 +2004,8 @@ id flip
 id floating
 id forever
 id fragment_container_view_tag
-id fruit1
-id fruit10
-id fruit2
-id fruit3
-id fruit4
-id fruit5
-id fruit6
-id fruit7
-id fruit8
-id fruit9
+id fruit_detail_content
+id fruit_detail_title
 id ghost_view
 id ghost_view_holder
 id gone
@@ -2042,6 +2036,7 @@ id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
 id labeled
+id labeltextview
 id layout
 id left
 id leftToRight
@@ -2058,6 +2053,7 @@ id linear6
 id linear7
 id linear8
 id linearDetected
+id linearbg
 id listMode
 id list_item
 id lottie1
@@ -2151,6 +2147,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyclerView
 id restart
 id reverse
 id reverseSawtooth
@@ -2283,7 +2280,6 @@ id view_tree_saved_state_registry_owner
 id view_tree_view_model_store_owner
 id visible
 id visible_removing_fragment_view_tag
-id vscroll1
 id wide
 id withText
 id withinBounds
@@ -2379,6 +2375,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout detail
 layout home
+layout item_fruit_detail
 layout main
 layout material_chip_input_combo
 layout material_clock_display
@@ -2448,6 +2445,7 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
+layout user_info
 layout view
 plurals mtrl_badge_content_description
 raw firebase_common_keep

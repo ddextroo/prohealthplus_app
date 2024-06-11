@@ -35,9 +35,9 @@ import java.util.concurrent.Executors;
 import android.graphics.Bitmap;
 
 public class ViewActivity extends AppCompatActivity {
-	
+
 	private Timer _timer = new Timer();
-	
+
 	private HashMap<String, Object> Header2 = new HashMap<>();
 	private HashMap<String, Object> body2 = new HashMap<>();
 	private HashMap<String, Object> m = new HashMap<>();
@@ -84,7 +84,7 @@ public class ViewActivity extends AppCompatActivity {
 		initialize(_savedInstanceState);
 		initializeLogic();
 	}
-	
+
 	private void initialize(Bundle _savedInstanceState) {
 		linear2 = findViewById(R.id.linear2);
 		linear3 = findViewById(R.id.linear3);
@@ -115,7 +115,7 @@ public class ViewActivity extends AppCompatActivity {
 				startActivity(i);
 			}
 		});
-		
+
 		linear8.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _view) {
@@ -125,7 +125,7 @@ public class ViewActivity extends AppCompatActivity {
 				startActivity(i);
 			}
 		});
-		
+
 		linear10.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _view) {
@@ -135,9 +135,9 @@ public class ViewActivity extends AppCompatActivity {
 				startActivity(i);
 			}
 		});
-		
+
 	}
-	
+
 	private void initializeLogic() {
 		textview1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montbold.ttf"), Typeface.NORMAL);
 		textview2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.BOLD);
@@ -173,52 +173,52 @@ public class ViewActivity extends AppCompatActivity {
 			String title = result.getTitle();
 			float accuracy = result.getConfidence();
 			combinedTitles.append(title).append(" - ").append(String.format("%.2f%% ", accuracy * 100.0f)).append("\n");
-			name[i] = title;
+			name[i] = title.toLowerCase().trim();
 			i++;
 		}
-		_firsletter(textview3, combinedTitles.toString());
+		_firsletter(textview3, combinedTitles.substring(2).trim());
 
 		super.onStart();
 	}
-	
+
 	public void _firsletter(final TextView _textview, final String _text) {
 				String text_textview = _text;
 					String firstLetter_textview = text_textview.substring(0, 1);
 					    String remainingLetters_textview = text_textview.substring(1, text_textview.length());
-					
+
 					    // change the first letter to uppercase
 					    firstLetter_textview = firstLetter_textview.toUpperCase();
-					
+
 					    // join the two substrings
 					    text_textview = firstLetter_textview + remainingLetters_textview;
-					
+
 					_textview.setText(text_textview);
 
 		}
-		
-		
+
+
 		public void _capitalizeFirstEveryWord(final TextView _textview, final String _text) {
 					// create a string
 					    String text_textview = _text;
-					
+
 					    // stores each characters to a char array
 					    char[] charArray_textview = text_textview.toCharArray();
 					    boolean foundSpace_textview = true;
-					
+
 					    for(int i = 0; i < charArray_textview.length; i++) {
-									
+
 									      // if the array element is a letter
 									      if(Character.isLetter(charArray_textview[i])) {
-													
+
 													        // check space is present before the letter
 													        if(foundSpace_textview) {
-																	
+
 																	          // change the letter into uppercase
 																	          charArray_textview[i] = Character.toUpperCase(charArray_textview[i]);
 																	          foundSpace_textview = false;
 																	        }
 													      }
-									
+
 									      else {
 													        // if the new character is not character
 													        foundSpace_textview = true;
@@ -228,10 +228,10 @@ public class ViewActivity extends AppCompatActivity {
 					    text_textview = String.valueOf(charArray_textview);
 					_textview.setText(text_textview);
 		}
-	
+
 	{
 	}
-	
+
 	public void _rippleRoundStroke(final View _view, final String _focus, final String _pressed, final double _round, final double _stroke, final String _strokeclr) {
 		android.graphics.drawable.GradientDrawable GG = new android.graphics.drawable.GradientDrawable();
 		GG.setColor(Color.parseColor(_focus));
@@ -241,17 +241,17 @@ public class ViewActivity extends AppCompatActivity {
 		android.graphics.drawable.RippleDrawable RE = new android.graphics.drawable.RippleDrawable(new android.content.res.ColorStateList(new int[][]{new int[]{}}, new int[]{ Color.parseColor(_pressed)}), GG, null);
 		_view.setBackground(RE);
 	}
-	
-	
+
+
 	public void _Custom_Loading(final boolean _ifShow) {
 		if (_ifShow) {
 			if (coreprog == null){
 				coreprog = new ProgressDialog(this);
 				coreprog.setCancelable(false);
 				coreprog.setCanceledOnTouchOutside(false);
-				
+
 				coreprog.requestWindowFeature(Window.FEATURE_NO_TITLE);  coreprog.getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(Color.TRANSPARENT));
-				
+
 			}
 			coreprog.setMessage(null);
 			coreprog.show();
@@ -267,33 +267,33 @@ public class ViewActivity extends AppCompatActivity {
 	private ProgressDialog coreprog;
 	{
 	}
-	
-	
+
+
 	@Deprecated
 	public void showMessage(String _s) {
 		Toast.makeText(getApplicationContext(), _s, Toast.LENGTH_SHORT).show();
 	}
-	
+
 	@Deprecated
 	public int getLocationX(View _v) {
 		int _location[] = new int[2];
 		_v.getLocationInWindow(_location);
 		return _location[0];
 	}
-	
+
 	@Deprecated
 	public int getLocationY(View _v) {
 		int _location[] = new int[2];
 		_v.getLocationInWindow(_location);
 		return _location[1];
 	}
-	
+
 	@Deprecated
 	public int getRandom(int _min, int _max) {
 		Random random = new Random();
 		return random.nextInt(_max - _min + 1) + _min;
 	}
-	
+
 	@Deprecated
 	public ArrayList<Double> getCheckedItemPositionsToArray(ListView _list) {
 		ArrayList<Double> _result = new ArrayList<Double>();
@@ -304,17 +304,17 @@ public class ViewActivity extends AppCompatActivity {
 		}
 		return _result;
 	}
-	
+
 	@Deprecated
 	public float getDip(int _input) {
 		return TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, _input, getResources().getDisplayMetrics());
 	}
-	
+
 	@Deprecated
 	public int getDisplayWidthPixels() {
 		return getResources().getDisplayMetrics().widthPixels;
 	}
-	
+
 	@Deprecated
 	public int getDisplayHeightPixels() {
 		return getResources().getDisplayMetrics().heightPixels;
