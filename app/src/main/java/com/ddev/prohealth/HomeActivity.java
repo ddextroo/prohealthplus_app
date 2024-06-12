@@ -3,11 +3,17 @@ package com.ddev.prohealth;
 import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.SpannableString;
+import android.text.SpannableStringBuilder;
+import android.text.Spanned;
+import android.text.style.ForegroundColorSpan;
+import android.text.style.StyleSpan;
 import android.util.SparseBooleanArray;
 import android.util.TypedValue;
 import android.view.View;
@@ -21,9 +27,21 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
+import androidx.core.text.HtmlCompat;
 
 import java.util.ArrayList;
 import java.util.Random;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 public class HomeActivity extends AppCompatActivity {
@@ -43,7 +61,11 @@ public class HomeActivity extends AppCompatActivity {
 	private LinearLayout linear5;
 	private TextView textview2;
 	private TextView textview3;
-	
+	private TextView detection;
+	private TextView name;
+	private TextView textview10;
+	private TextView advice;
+
 	private Intent i = new Intent();
 	private static final int PICK_IMAGE_REQUEST = 1;
 
@@ -82,7 +104,11 @@ public class HomeActivity extends AppCompatActivity {
 		linear5 = findViewById(R.id.linear5);
 		textview2 = findViewById(R.id.detectedTitle);
 		textview3 = findViewById(R.id.detected);
-		
+		detection = findViewById(R.id.detection);
+		textview10 = findViewById(R.id.textview10);
+		name = findViewById(R.id.name);
+		advice = findViewById(R.id.advice);
+
 		linear4.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View _view) {
@@ -127,8 +153,74 @@ public class HomeActivity extends AppCompatActivity {
 		textview1.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montbold.ttf"), Typeface.NORMAL);
 		textview2.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.BOLD);
 		textview3.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.BOLD);
+		textview10.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.BOLD);
+		advice.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montreg.ttf"), Typeface.BOLD);
+		name.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montbold.ttf"), Typeface.BOLD);
+		detection.setTypeface(Typeface.createFromAsset(getAssets(),"fonts/montbold.ttf"), Typeface.BOLD);
 		textview4.setVisibility(View.GONE);
 		imageview1.setVisibility(View.GONE);
+
+		loadUserDataAndAdvice();
+	}
+
+	private void loadUserDataAndAdvice() {
+		SharedPreferences userPrefs = getSharedPreferences("user", MODE_PRIVATE);
+		String conditionsJson = userPrefs.getString("conditions", "{}");
+		System.out.println(conditionsJson);
+
+		String userName = userPrefs.getString("name", "User");
+		Map<String, Boolean> userConditions = new Gson().fromJson(conditionsJson, new TypeToken<Map<String, Boolean>>() {}.getType());
+
+		name.setText(userName);
+
+		String jsonData = _loadFromAsset();
+		if (jsonData == null) {
+			showMessage("Error loading data");
+			return;
+		}
+
+		Type listType = new TypeToken<List<ConditionAdvice>>() {}.getType();
+		List<ConditionAdvice> adviceList = new Gson().fromJson(jsonData, listType);
+
+		SpannableStringBuilder adviceText = new SpannableStringBuilder();
+
+		for (Map.Entry<String, Boolean> entry : userConditions.entrySet()) {
+			if (entry.getValue()) {
+				for (ConditionAdvice ca : adviceList) {
+					if (ca.getId().equalsIgnoreCase(entry.getKey())) {
+						// Create a SpannableString for the styled text
+						SpannableString styledCondition = new SpannableString(ca.getCondition());
+
+						// Apply color and bold style
+						styledCondition.setSpan(new ForegroundColorSpan(Color.parseColor("#171717")), 0, styledCondition.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+						styledCondition.setSpan(new StyleSpan(Typeface.BOLD), 0, styledCondition.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+
+						// Append the styled advice to adviceText
+						adviceText.append(styledCondition).append("\n\n").append(ca.getAdvice()).append("\n\n");
+						break;
+					}
+				}
+			}
+		}
+
+		advice.setText(adviceText, TextView.BufferType.SPANNABLE);
+	}
+
+
+	private String _loadFromAsset() {
+		String result = null;
+		try {
+			InputStream is = getAssets().open("usercondition.json");
+			int size = is.available();
+			byte[] buffer = new byte[size];
+			is.read(buffer);
+			is.close();
+			result = new String(buffer, "UTF-8");
+		} catch (IOException ex) {
+			ex.printStackTrace();
+			return null;
+		}
+		return result;
 	}
 	
 	public void _rippleRoundStroke(final View _view, final String _focus, final String _pressed, final double _round, final double _stroke, final String _strokeclr) {
@@ -202,6 +294,28 @@ public class HomeActivity extends AppCompatActivity {
 			_result.add((double)_arr.keyAt(_iIdx));
 		}
 		return _result;
+	}
+
+	private class ConditionAdvice {
+		private String id;
+		private String condition;
+		private String question;
+		private String advice;
+
+		public String getId() {
+			return id;
+		}
+
+		public String getQuestion() {
+			return question;
+		}
+
+		public String getAdvice() {
+			return advice;
+		}
+		public String getCondition() {
+			return condition;
+		}
 	}
 	
 	@Deprecated

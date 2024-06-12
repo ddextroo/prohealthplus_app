@@ -1,96 +1,191 @@
-<LinearLayout
-	xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
 	android:orientation="vertical">
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
 	<LinearLayout
 		android:id="@+id/linear1"
 		android:layout_width="match_parent"
 		android:layout_height="match_parent"
-		android:padding="8dp"
 		android:background="#FEFEFE"
-		android:orientation="vertical">
+		android:orientation="vertical"
+		android:padding="8dp">
+
 		<LinearLayout
 			android:id="@+id/linear2"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
-			android:padding="8dp"
 			android:gravity="center_horizontal|center_vertical"
-			android:orientation="vertical">
+			android:orientation="vertical"
+			android:padding="8dp">
+
 			<ImageView
 				android:id="@+id/imageview1"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:src="@drawable/default_image"
-				android:scaleType="center" />
+				android:scaleType="center"
+				android:src="@drawable/default_image" />
+
 			<TextView
 				android:id="@+id/textview4"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:padding="8dp"
 				android:text="TextView"
-				android:textSize="12sp"
-				android:textColor="#000000" />
+				android:textColor="#000000"
+				android:textSize="12sp" />
+
 			<TextView
 				android:id="@+id/textview1"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
 				android:padding="8dp"
 				android:text="ProHealth+"
-				android:textSize="25sp"
-				android:textColor="#008037" />
+				android:textColor="#008037"
+				android:textSize="25sp" />
+
+			<LinearLayout
+				android:id="@+id/divider1"
+				android:layout_width="match_parent"
+				android:layout_height="1dp"
+				android:background="#E0E0E0"
+				android:orientation="horizontal"></LinearLayout>
 		</LinearLayout>
+
 		<LinearLayout
 			android:id="@+id/linear3"
 			android:layout_width="match_parent"
-			android:layout_height="match_parent"
-			android:padding="8dp"
+			android:layout_height="wrap_content"
 			android:gravity="center_horizontal|center_vertical"
-			android:orientation="horizontal">
-			<LinearLayout
-				android:id="@+id/linearDetected"
+			android:orientation="vertical"
+			android:padding="8dp">
+
+			<TextView
+				android:id="@+id/detection"
 				android:layout_width="wrap_content"
 				android:layout_height="wrap_content"
-				android:layout_marginRight="10dp"
-				android:paddingLeft="30dp"
-				android:paddingTop="40dp"
-				android:paddingRight="30dp"
-				android:paddingBottom="40dp"
-				android:background="#008037"
-				android:gravity="center_horizontal|center_vertical"
-				android:orientation="horizontal">
-				<TextView
-					android:id="@+id/detectedTitle"
-					android:layout_width="wrap_content"
-					android:layout_height="wrap_content"
-					android:padding="8dp"
-					android:text="Camera"
-					android:textSize="16sp"
-					android:textColor="#FEFEFE" />
-			</LinearLayout>
+				android:layout_marginBottom="10dp"
+				android:layout_weight="1"
+				android:text="Detection"
+				android:textColor="#171717" />
+
 			<LinearLayout
-				android:id="@+id/linear5"
-				android:layout_width="wrap_content"
-				android:layout_height="wrap_content"
-				android:layout_marginLeft="10dp"
-				android:paddingLeft="30dp"
-				android:paddingTop="40dp"
-				android:paddingRight="30dp"
-				android:paddingBottom="40dp"
-				android:background="#008037"
-				android:gravity="center_horizontal|center_vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:gravity="center"
 				android:orientation="horizontal">
-				<TextView
-					android:id="@+id/detected"
+
+				<LinearLayout
+					android:id="@+id/linearDetected"
 					android:layout_width="wrap_content"
 					android:layout_height="wrap_content"
-					android:padding="8dp"
-					android:text="Upload"
-					android:textSize="16sp"
-					android:textColor="#FEFEFE" />
+					android:layout_marginRight="10dp"
+					android:background="#008037"
+					android:gravity="center_horizontal|center_vertical"
+					android:orientation="vertical"
+					android:paddingLeft="30dp"
+					android:paddingTop="40dp"
+					android:paddingRight="30dp"
+					android:paddingBottom="40dp">
+
+					<ImageView
+						android:id="@+id/imageView"
+						android:layout_width="40dp"
+						android:layout_height="40dp"
+						app:srcCompat="@drawable/camera_line" />
+
+					<TextView
+						android:id="@+id/detectedTitle"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="8dp"
+						android:text="Camera"
+						android:textColor="#FEFEFE"
+						android:textSize="16sp" />
+				</LinearLayout>
+
+				<LinearLayout
+					android:id="@+id/linear5"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_marginLeft="10dp"
+					android:background="#008037"
+					android:gravity="center_horizontal|center_vertical"
+					android:orientation="vertical"
+					android:paddingLeft="30dp"
+					android:paddingTop="40dp"
+					android:paddingRight="30dp"
+					android:paddingBottom="40dp">
+
+					<ImageView
+						android:id="@+id/imageView"
+						android:layout_width="match_parent"
+						android:layout_height="40dp"
+						app:srcCompat="@drawable/upload_line" />
+
+					<TextView
+						android:id="@+id/detected"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:padding="8dp"
+						android:text="Upload"
+						android:textColor="#FEFEFE"
+						android:textSize="16sp" />
+				</LinearLayout>
+
 			</LinearLayout>
 		</LinearLayout>
+
+		<LinearLayout
+			android:id="@+id/divider2"
+			android:layout_width="match_parent"
+			android:layout_height="1dp"
+			android:background="#E0E0E0"
+			android:orientation="horizontal"></LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:orientation="vertical"
+			android:padding="10dp">
+
+			<TextView
+				android:id="@+id/name"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Hello Name!"
+				android:textColor="#171717" />
+
+			<TextView
+				android:id="@+id/textview10"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:text="Here's a Fruit / Vegetable Recommendation For You"
+				android:textColor="#171717" />
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:layout_marginTop="20dp"
+				android:gravity="center_horizontal"
+				android:orientation="vertical">
+
+				<TextView
+					android:id="@+id/advice"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="20dp"
+					android:gravity="center"
+					android:justificationMode="inter_word"
+					android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis consequat orci ac pharetra efficitur. Integer sagittis diam id massa pulvinar ultrices. Nulla facilisi. Vestibulum vehicula ipsum ut bibendum malesuada. Aliquam a fringilla urna. Suspendisse potenti. In vestibulum molestie sem ac suscipit. Duis dictum velit et tellus pretium consectetur. Nam hendrerit pretium mauris ut lobortis. Vivamus placerat viverra nisl vitae rhoncus.  Donec ac lectus laoreet, convallis ex lobortis, semper nunc. Quisque auctor risus et ipsum tincidunt aliquet. Proin pretium leo nulla, et pellentesque ipsum elementum rutrum. Praesent dapibus dictum mauris, at pellentesque mauris convallis quis. Nullam consequat interdum lorem, a tempor orci cursus at. Nunc dapibus libero dolor, vel fringilla odio malesuada vitae. Nullam ac purus lobortis, porttitor nibh et, scelerisque erat. Maecenas tempor lectus et lobortis tempor. Cras varius dolor nisi, vitae volutpat nisi aliquam sed." />
+			</LinearLayout>
+		</LinearLayout>
+
 	</LinearLayout>
+	</ScrollView>
+
 </LinearLayout>

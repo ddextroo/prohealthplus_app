@@ -31,6 +31,7 @@ public class DetailActivity extends AppCompatActivity {
 //	private LinearLayout linear1;
 //	private LinearLayout linear2;
 	private TextView textview2;
+	private TextView fruitName;
 	private RecyclerView recyclerView;
 	private FruitDetailAdapter adapter;
 
@@ -43,6 +44,7 @@ public class DetailActivity extends AppCompatActivity {
 //		linear2 = findViewById(R.id.linear2);
 		textview2 = findViewById(R.id.detectedTitle);
 		recyclerView = findViewById(R.id.recyclerView);
+		fruitName = findViewById(R.id.fruitName);
 
 		recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -50,61 +52,59 @@ public class DetailActivity extends AppCompatActivity {
 	}
 
 	private void initializeLogic() {
-		String[] fruits = getIntent().getStringArrayExtra("name");
+		String fruit = getIntent().getStringExtra("name");
 		String detailType = getIntent().getStringExtra("detail");
 
 		textview2.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/montbold.ttf"), Typeface.NORMAL);
+		fruitName.setTypeface(Typeface.createFromAsset(getAssets(), "fonts/montbold.ttf"), Typeface.NORMAL);
 
 		List<String> details = new ArrayList<>();
 
 		try {
 			JSONArray fruitsArray = new JSONArray(_loadFromAsset());
-			for (String fruit : fruits) {
-				System.out.println(fruit + "dexteer");
-				for (int i = 0; i < fruitsArray.length(); i++) {
-					JSONObject fruitObject = fruitsArray.getJSONObject(i);
-					if (fruit != null && fruit.substring(2).trim().equals(fruitObject.getString("name").trim())) {
-						String name = fruitObject.getString("name");
-						String description = fruitObject.getString("description");
-						String history = fruitObject.getString("history");
-						String effects = fruitObject.getString("effects");
+			for (int i = 0; i < fruitsArray.length(); i++) {
+				JSONObject fruitObject = fruitsArray.getJSONObject(i);
+				if (fruit != null && fruit.trim().equalsIgnoreCase(fruitObject.getString("name").trim())) {
+					String name = fruitObject.getString("name");
+					String description = fruitObject.getString("description");
+					String history = fruitObject.getString("history");
+					String effects = fruitObject.getString("effects");
 
-						JSONArray nutrientsArray = fruitObject.getJSONArray("nutrients");
-						StringBuilder detailBuilder = new StringBuilder();
-						Object effectsObject = fruitObject.get("effects");
+					JSONArray nutrientsArray = fruitObject.getJSONArray("nutrients");
+					StringBuilder detailBuilder = new StringBuilder();
+					Object effectsObject = fruitObject.get("effects");
 
-						detailBuilder.append("<b><h1>").append(name.substring(0, 1).toUpperCase()).append(name.substring(1)).append("</h1></b>");
-
-						if ("nutrient".equals(detailType)) {
-							textview2.setText(Html.fromHtml("<b><h2>Nutrients</h2></b>"));
-							for (int j = 0; j < nutrientsArray.length(); j++) {
-								JSONObject nutrientObject = nutrientsArray.getJSONObject(j);
-								String nutrientTitle = nutrientObject.getString("title");
-								String nutrientContent = nutrientObject.getString("content");
-								detailBuilder.append("<br/><b><p>").append(nutrientTitle).append("</p></b>").append(nutrientContent);
-							}
-						} else if ("description".equals(detailType)) {
-							textview2.setText(Html.fromHtml("<br/><b><h2>Description and History</h2></b>"));
-							detailBuilder.append("<br/><b><h2>Description</h2></b>").append(description)
-									.append("<br/><br/><b><h2>History</h2></b>").append(history);
-						} else if ("effect".equals(detailType)) {
-							textview2.setText(Html.fromHtml("<b><h2>Effects</h2></b><br/>"));
-							if (effectsObject instanceof String) {
-								detailBuilder.append("<br/><br/>").append(effectsObject);
-							} else if (effectsObject instanceof JSONArray) {
-								JSONArray effectsArray = (JSONArray) effectsObject;
-								for (int k = 0; k < effectsArray.length(); k++) {
-									JSONObject effectObject = effectsArray.getJSONObject(k);
-									String effectTitle = effectObject.getString("title");
-									String effectContent = effectObject.getString("content");
-									detailBuilder.append("<br/><br/><b>").append(effectTitle).append("</b>: ").append(effectContent);
-								}
+//					detailBuilder.append("<b><h1>").append(name.substring(0, 1).toUpperCase()).append(name.substring(1)).append("</h1></b>");
+					fruitName.setText(capitalizeFirstLetter(name));
+					if ("nutrient".equals(detailType)) {
+						textview2.setText(Html.fromHtml("<b><h2>Nutrients</h2></b>"));
+						for (int j = 0; j < nutrientsArray.length(); j++) {
+							JSONObject nutrientObject = nutrientsArray.getJSONObject(j);
+							String nutrientTitle = nutrientObject.getString("title");
+							String nutrientContent = nutrientObject.getString("content");
+							detailBuilder.append("<br/><b><p>").append(nutrientTitle).append("</p></b>").append(nutrientContent);
+						}
+					} else if ("description".equals(detailType)) {
+						textview2.setText(Html.fromHtml("<b><h2>Description and History</b><br/>"));
+						detailBuilder.append("<br/><b><p>Description</p></b>").append(description)
+								.append("<br/><b><p>History</p></b>").append(history);
+					} else if ("effect".equals(detailType)) {
+						textview2.setText(Html.fromHtml("<b><h2>Effects</b><br/>"));
+						if (effectsObject instanceof String) {
+							detailBuilder.append("<br/><br/>").append(effectsObject);
+						} else if (effectsObject instanceof JSONArray) {
+							JSONArray effectsArray = (JSONArray) effectsObject;
+							for (int k = 0; k < effectsArray.length(); k++) {
+								JSONObject effectObject = effectsArray.getJSONObject(k);
+								String effectTitle = effectObject.getString("title");
+								String effectContent = effectObject.getString("content");
+								detailBuilder.append("<br/><br/><b>").append(effectTitle).append("</b>: ").append(effectContent);
 							}
 						}
-
-						details.add(detailBuilder.toString());
-						break;
 					}
+
+					details.add(detailBuilder.toString());
+					break; // Stop the loop after the first match
 				}
 			}
 		} catch (JSONException e) {
@@ -114,6 +114,14 @@ public class DetailActivity extends AppCompatActivity {
 		adapter = new FruitDetailAdapter(this, details);
 		recyclerView.setAdapter(adapter);
 	}
+
+	private String capitalizeFirstLetter(String str) {
+		if (str == null || str.isEmpty()) {
+			return str;
+		}
+		return str.substring(0, 1).toUpperCase() + str.substring(1);
+	}
+
 
 	private String _loadFromAsset() {
 		String result = null;

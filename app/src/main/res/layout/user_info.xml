@@ -36,6 +36,7 @@
                 android:id="@+id/labeltextview"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
                 android:paddingLeft="5dp"
                 android:text="Hello! What is your name?"
                 android:textSize="12sp" />
@@ -76,105 +77,105 @@
                 android:orientation="vertical">
 
                 <CheckBox
-                    android:id="@+id/checkBox"
+                    android:id="@+id/diabetes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Do you have diabetes?"
                     android:textSize="12sp" />
 
                 <CheckBox
-                    android:id="@+id/checkBox"
+                    android:id="@+id/highblood"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Do you have any experience dealing with high blood pressure?"
                     android:textSize="12sp" />
 
                 <CheckBox
-                    android:id="@+id/checkBox"
+                    android:id="@+id/asthma"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Have you been diagnosed with asthma?"
                     android:textSize="12sp" />
 
                 <CheckBox
-                    android:id="@+id/checkBox"
+                    android:id="@+id/copd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Do you, or someone you know, live with COPD?"
                     android:textSize="12sp" />
 
                 <CheckBox
-                    android:id="@+id/checkBox"
+                    android:id="@+id/heart"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Is heart disease something that you are concerned with personally?"
                     android:textSize="12sp" />
 
                 <CheckBox
-                    android:id="@+id/checkBox"
+                    android:id="@+id/kidney"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Have you ever been diagnosed with chronic kidney disease?"
                     android:textSize="12sp" />
 
                 <CheckBox
-                    android:id="@+id/checkBox"
+                    android:id="@+id/arthritis"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="Do you manage  arthritis as part of your health regimen?"
+                    android:text="Do you manage arthritis as part of your health regimen?"
                     android:textSize="12sp" />
 
                 <CheckBox
-                    android:id="@+id/checkBox"
+                    android:id="@+id/epilepsy"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Do you have epilepsy?"
                     android:textSize="12sp" />
 
                 <CheckBox
-                    android:id="@+id/checkBox"
+                    android:id="@+id/depression"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Do you have any experience managing depression?"
                     android:textSize="12sp" />
 
                 <CheckBox
-                    android:id="@+id/checkBox"
+                    android:id="@+id/anxiety"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Have you been diagnosed with an anxiety disorder?"
                     android:textSize="12sp" />
 
                 <CheckBox
-                    android:id="@+id/checkBox"
+                    android:id="@+id/gerd"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Do you deal with GERD in your daily life?"
                     android:textSize="12sp" />
 
                 <CheckBox
-                    android:id="@+id/checkBox"
+                    android:id="@+id/bowel"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Do you have inflammatory bowel disease (IBD)?"
                     android:textSize="12sp" />
 
                 <CheckBox
-                    android:id="@+id/checkBox"
+                    android:id="@+id/osteoporosis"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Have you been diagnosed with osteoporosis?"
                     android:textSize="12sp" />
 
                 <CheckBox
-                    android:id="@+id/checkBox"
+                    android:id="@+id/hepatitis"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Do you have any experience with hepatitis B or C?"
                     android:textSize="12sp" />
 
                 <CheckBox
-                    android:id="@+id/checkBox"
+                    android:id="@+id/psoriasis"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Have you been diagnosed with psoriasis?"
@@ -186,7 +187,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linear6"
+        android:id="@+id/next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="clip_horizontal|center_vertical"

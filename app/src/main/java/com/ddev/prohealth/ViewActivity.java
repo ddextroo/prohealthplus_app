@@ -75,7 +75,7 @@ public class ViewActivity extends AppCompatActivity {
 	private Executor executor = Executors.newSingleThreadExecutor();
 	private String path;
 	private Bitmap bitmap;
-	private String[] name = new String[10];
+	private String name = "";
 
 	@Override
 	protected void onCreate(Bundle _savedInstanceState) {
@@ -90,7 +90,7 @@ public class ViewActivity extends AppCompatActivity {
 		linear3 = findViewById(R.id.linear3);
 		linear4 = findViewById(R.id.linearDetected);
 		linear5 = findViewById(R.id.linear5);
-		linear6 = findViewById(R.id.linear6);
+		linear6 = findViewById(R.id.next);
 		linear8 = findViewById(R.id.linear8);
 		linear10 = findViewById(R.id.linear10);
 		textview1 = findViewById(R.id.textview1);
@@ -167,17 +167,16 @@ public class ViewActivity extends AppCompatActivity {
 	@Override
 	protected void onStart() {
 		final List<Classifier.Recognition> results = classifier.recognizeImage(bitmap);
-		StringBuilder combinedTitles = new StringBuilder();
-		int i = 0;
-		for (Classifier.Recognition result : results) {
-			String title = result.getTitle();
-			float accuracy = result.getConfidence();
-			combinedTitles.append(title).append(" - ").append(String.format("%.2f%% ", accuracy * 100.0f)).append("\n");
-			name[i] = title.toLowerCase().trim();
-			i++;
-		}
-		_firsletter(textview3, combinedTitles.substring(2).trim());
+		if (!results.isEmpty()) {
+			Classifier.Recognition firstResult = results.get(0);
+			String title = firstResult.getTitle();
+			float accuracy = firstResult.getConfidence();
+			String combinedTitle = title + " - " + String.format("%.2f%%", accuracy * 100.0f);
 
+			name = title.toLowerCase().substring(2).trim();
+
+			_firsletter(textview3, combinedTitle.substring(2).trim());
+		}
 		super.onStart();
 	}
 

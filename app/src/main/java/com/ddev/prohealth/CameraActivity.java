@@ -84,7 +84,7 @@ public class CameraActivity extends AppCompatActivity {
 	private void initialize(Bundle _savedInstanceState) {
 		linear1 = findViewById(R.id.linear1);
 		imageview1 = findViewById(R.id.imageview1);
-		linear6 = findViewById(R.id.linear6);
+		linear6 = findViewById(R.id.next);
 		linear7 = findViewById(R.id.linear7);
 		textview4 = findViewById(R.id.textview4);
 		textview5 = findViewById(R.id.textview5);

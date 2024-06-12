@@ -1743,6 +1743,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable calendar
+drawable camera_line
 drawable check_line
 drawable circle_filled
 drawable circle_outline
@@ -1824,6 +1825,7 @@ drawable test_custom_background
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable upload_line
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -1894,14 +1896,18 @@ id activity_chooser_view_content
 id add
 id adjust_height
 id adjust_width
+id advice
 id alertTitle
 id aligned
 id all
 id always
 id animateToEnd
 id animateToStart
+id anxiety
 id arc
+id arthritis
 id asConfigured
+id asthma
 id async
 id auto
 id autoComplete
@@ -1916,6 +1922,7 @@ id bitmapImage
 id blocking
 id bottom
 id bounce
+id bowel
 id buttonPanel
 id cancel_button
 id center
@@ -1923,7 +1930,6 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
-id checkBox
 id checkbox
 id checked
 id chip
@@ -1944,6 +1950,7 @@ id content
 id contentPanel
 id contiguous
 id coordinator
+id copd
 id cos
 id counterclockwise
 id custom
@@ -1956,6 +1963,7 @@ id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
 id deltaRelative
+id depression
 id design_bottom_sheet
 id design_menu_item_action_area
 id design_menu_item_action_area_stub
@@ -1963,6 +1971,8 @@ id design_menu_item_text
 id design_navigation_view
 id detected
 id detectedTitle
+id detection
+id diabetes
 id dialog_button
 id dimensions
 id direct
@@ -1971,6 +1981,8 @@ id disablePostScroll
 id disableScroll
 id disabled
 id disjoint
+id divider1
+id divider2
 id dragDown
 id dragEnd
 id dragLeft
@@ -1989,6 +2001,7 @@ id end
 id endToStart
 id enterAlways
 id enterAlwaysCollapsed
+id epilepsy
 id errorTextView
 id exitUntilCollapsed
 id expand_activities_button
@@ -2004,8 +2017,10 @@ id flip
 id floating
 id forever
 id fragment_container_view_tag
+id fruitName
 id fruit_detail_content
 id fruit_detail_title
+id gerd
 id ghost_view
 id ghost_view_holder
 id gone
@@ -2016,7 +2031,10 @@ id groups
 id guideline
 id hardware
 id header_title
+id heart
+id hepatitis
 id hideable
+id highblood
 id home
 id homeAsUp
 id honorRequest
@@ -2027,6 +2045,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
 id imageview1
 id info
 id invisible
@@ -2035,6 +2054,7 @@ id italic
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
+id kidney
 id labeled
 id labeltextview
 id layout
@@ -2049,7 +2069,6 @@ id linear10
 id linear2
 id linear3
 id linear5
-id linear6
 id linear7
 id linear8
 id linearDetected
@@ -2112,12 +2131,14 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
+id name
 id navigation_bar_item_icon_view
 id navigation_bar_item_labels_group
 id navigation_bar_item_large_label_view
 id navigation_bar_item_small_label_view
 id navigation_header_container
 id never
+id next
 id noScroll
 id none
 id normal
@@ -2126,6 +2147,7 @@ id notification_main_column
 id notification_main_column_container
 id off
 id on
+id osteoporosis
 id outline
 id outward
 id packed
@@ -2144,6 +2166,7 @@ id position
 id postLayout
 id progress_circular
 id progress_horizontal
+id psoriasis
 id radio
 id ratio
 id rectangles
@@ -2248,6 +2271,7 @@ id textinput_placeholder
 id textinput_prefix_text
 id textinput_suffix_text
 id textview1
+id textview10
 id textview4
 id textview5
 id textview6
